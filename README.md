@@ -89,6 +89,6 @@ Ima mogucnost pregleda svih parkinga u Sarajevu I mogucnost rezervacije parkinga
 Radi na poslovima naplate i evidencije dolaska/odlaska korisnika koji je
 rezervisao parking
 
-###Vlasnik parkinga 
+### Vlasnik parkinga 
 
 Ima uvid u stanje I pristup svim izvjestajima parkinga.
