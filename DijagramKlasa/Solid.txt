@@ -1,0 +1,16 @@
+##**SOLID**
+
+-Single responsibility principle
+	Kako nas projekat nema klasu koja ima previse informacija i odgovornosti("GOD klasa") nema potrebe da koristimo ovaj princip.
+
+-Open/closed principle
+	Klasa User ne narusava ovaj princip, dok kod klase Parking moguce je da dodje do nekih problema i da se narusi princip.
+
+-Liskov substitution principle
+	Kako sve metode nasih baznih klasa koriste izvedene klase ispostovali smo Liskov princip.
+
+-Interface segregation principle
+	Narusavamo ovaj princip jer zavisimo o svarnim klasama a ne apstraktnim klasama(Primjer: User).
+
+-Dependency inversion principle
+	Ne narusavamo ovaj princip jer nemamo debelih klasa.
