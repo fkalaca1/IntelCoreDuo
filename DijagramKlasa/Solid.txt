@@ -1,4 +1,4 @@
-##**SOLID**
+SOLID
 
 -Single responsibility principle
 	Kako nas projekat nema klasu koja ima previse informacija i odgovornosti("GOD klasa") nema potrebe da koristimo ovaj princip.
