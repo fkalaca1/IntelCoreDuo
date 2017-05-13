@@ -5,4 +5,8 @@
     xmlns:local="using:ParKing"
     RequestedTheme="Light">
 
+    <Application.Resources>
+        <ResourceDictionary Source="Styles.xaml" />
+    </Application.Resources>
+
 </Application>
