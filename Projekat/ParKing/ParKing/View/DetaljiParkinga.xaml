@@ -1,0 +1,119 @@
+﻿<Page
+    x:Class="ParKing.View.DetaljiParkinga"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ParKing.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid Background="#147ad4">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="60"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel  Grid.Row="1" Grid.Column="0">
+                <TextBlock 
+            x:Name="textBlockOd"  
+            Text="Od"
+            Style="{StaticResource TekstStranice3}"/>
+                <TextBlock 
+            x:Name="textBlockDo"  
+            Text="Do" 
+                    Margin="0,10,0,0"
+            Style="{StaticResource TekstStranice3}"/>
+            </StackPanel>
+            
+            
+            <StackPanel Grid.Row="1" Grid.Column="1">
+                <StackPanel Orientation="Horizontal" >
+                    <CalendarDatePicker x:Name="OdDatePicker"></CalendarDatePicker>
+                    <TimePicker x:Name="OdTimePicker"></TimePicker>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" >
+                    <CalendarDatePicker x:Name="DoDatePicker"></CalendarDatePicker>
+                    <TimePicker x:Name="DoTimePicker"></TimePicker>
+                </StackPanel>
+            </StackPanel>
+
+            <Image MaxWidth="800" Grid.Row="2" Grid.Column="1" Source="ms-appx:///Assets/testpark.png" Margin="0,10,0,10" Stretch="Uniform"/>
+
+            <StackPanel x:Name="Detalji" Grid.Row="3" Grid.Column="1">
+            
+            <Border BorderBrush="White" BorderThickness="1" Margin="5">
+            <TextBlock 
+            x:Name="textBlockOcjena"         
+            Text="Ocjena" 
+            Style="{StaticResource TekstStranice2}"/>
+            </Border>
+
+            <Border BorderBrush="White" BorderThickness="1" Margin="5">
+            <TextBlock 
+            x:Name="textBlockAdresa"  
+            Text="Adresa" 
+            Style="{StaticResource TekstStranice2}"/>
+            </Border>
+                
+            <Border BorderBrush="White" BorderThickness="1" Margin="5">
+            <TextBlock 
+            x:Name="textBlockCijena"  
+            Text="Cijena" 
+            Style="{StaticResource TekstStranice2}"/>
+            </Border>
+
+            <Border BorderBrush="White" BorderThickness="1" Margin="5">
+            <TextBlock 
+            x:Name="textBlockTelefon"  
+            Text="Telefon" 
+            Style="{StaticResource TekstStranice2}"/>
+            </Border>
+
+
+           <Border BorderBrush="White" BorderThickness="1" Margin="5">
+            <TextBlock 
+            x:Name="textBlockKapacitet"  
+            Text="Kapacitet" 
+            Style="{StaticResource TekstStranice2}"/>
+            </Border>
+            </StackPanel>
+            
+            <Button
+            Content="Rezervisi sad"
+            Grid.Row="4"
+            Grid.ColumnSpan="3"
+            Background="Green"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            Style="{StaticResource ButtonStyle}"/>
+            
+            <Button x:Name="BackButton"
+            Content="&#xE0A6;"
+            VerticalAlignment="Top"
+            FontFamily="Segoe MDL2 Assets"
+            Foreground="White"
+            FontSize="25"
+            Grid.Row="0"
+            Grid.Column="0"
+            />
+
+            <TextBlock Grid.Row="0" Grid.Column="1"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            x:Name="textBlockImeParkinga"  
+            Text="Parking1" 
+            Style="{StaticResource TekstStranice3}"/>
+
+        </Grid>
+    </ScrollViewer>
+</Page>
