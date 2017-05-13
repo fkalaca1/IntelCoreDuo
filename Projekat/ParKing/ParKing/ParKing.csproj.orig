@@ -99,6 +99,13 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
+    <Compile Include="View\DetaljiParkinga.xaml.cs">
+      <DependentUpon>DetaljiParkinga.xaml</DependentUpon>
+=======
+    <Compile Include="View\Pocetna.xaml.cs">
+      <DependentUpon>Pocetna.xaml</DependentUpon>
+>>>>>>> 98a8d039743ebe48ceaea0c9ccc6076a9cb95b21
     </Compile>
     <Compile Include="View\Prijava.xaml.cs">
       <DependentUpon>Prijava.xaml</DependentUpon>
@@ -141,8 +148,11 @@
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Page>
+<<<<<<< HEAD
     <Page Include="View\DetaljiParkinga.xaml">
+=======
     <Page Include="View\Pocetna.xaml">
+>>>>>>> 98a8d039743ebe48ceaea0c9ccc6076a9cb95b21
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
