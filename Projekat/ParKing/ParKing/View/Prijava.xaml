@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="ParKing.View.Prijava"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ParKing.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background ="#147ad4">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Image Grid.Row="0" Grid.Column="1" Source="ms-appx:///Assets/parkingLogo.png" Margin="0,100,0,10" Stretch="Uniform"/>
+        <ScrollViewer Grid.Row="1" Grid.Column="1" VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+                <TextBox Style="{StaticResource TextBoxStyle}" PlaceholderText="Username" Name="usernameTexBox"/>
+                <PasswordBox Style="{StaticResource PasswordBoxStyle}" PlaceholderText="Password" Name="passwordTexBox"/>
+                <Button Style="{StaticResource ButtonStyle}" Content="Prijavi se" Background="Green" Name="loginButton" HorizontalAlignment="Stretch"/>
+                <HyperlinkButton Content="Zaboravili ste lozinku?" Name="passwordButton" Margin="0,0,0,0" Foreground="AliceBlue"/>
+                <Button Style="{StaticResource ButtonStyle}" Content="Prijavi se sa Google+" Name="googleButton" Background="Red" HorizontalAlignment="Stretch"/>
+            </StackPanel>
+        </ScrollViewer>
+        <Grid Grid.ColumnSpan="3" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="Zelis nam se pridruziti?" Margin="0,17,0,10" Foreground="White" HorizontalAlignment="Center"/>
+            <HyperlinkButton Grid.Column="1" Content="Registruj se ovdje" Margin="0,10,0,10" Foreground="White" HorizontalAlignment="Center"/>
+        </Grid>
+    </Grid>
+</Page>

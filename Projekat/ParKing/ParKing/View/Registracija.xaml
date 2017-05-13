@@ -22,10 +22,8 @@
             </Grid.ColumnDefinitions>
 
             <StackPanel Grid.ColumnSpan="3">
-                <Image Name="logo" Height="150" Width="300" Source="ms-appx:///Assets/parkingLogo.jpg"
-                   RelativePanel.AlignHorizontalCenterWithPanel="true" 
-                   RelativePanel.AlignVerticalCenterWithPanel="true"
-                   Margin="0,15,0,15" Stretch="Uniform"/>
+                <Image Name="logo" Height="150" Width="300" Source="ms-appx:///Assets/parkingLogo.png"
+                   Margin="0,50,0,15" Stretch="Uniform"/>
             </StackPanel>
 
             <RelativePanel Grid.Row="1" Grid.Column="1">
