@@ -99,35 +99,25 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\DetaljiParkinga.xaml.cs">
-      <DependentUpon>DetaljiParkinga.xaml</DependentUpon>
-    </Compile>
+<<<<<<< HEAD
     <Compile Include="View\ListaParkinga.xaml.cs">
       <DependentUpon>ListaParkinga.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\Profil.xaml.cs">
-      <DependentUpon>Profil.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\UserControls\EditElement.xaml.cs">
-      <DependentUpon>EditElement.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\UserControls\ParkingPopup.xaml.cs">
       <DependentUpon>ParkingPopup.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Pocetna.xaml.cs">
-      <DependentUpon>Pocetna.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\UserControls\ListaParkingElement.xaml.cs">
       <DependentUpon>ListaParkingElement.xaml</DependentUpon>
+=======
+    <Compile Include="View\DetaljiParkinga.xaml.cs">
+      <DependentUpon>DetaljiParkinga.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pocetna.xaml.cs">
+      <DependentUpon>Pocetna.xaml</DependentUpon>
+>>>>>>> 42e3730b6ab870d6f9a338083a4977b8fa96d991
     </Compile>
     <Compile Include="View\Prijava.xaml.cs">
       <DependentUpon>Prijava.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\UserControls\Parkinzi.xaml.cs">
-      <DependentUpon>Parkinzi.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\UserControls\ProfilElement.xaml.cs">
-      <DependentUpon>ProfilElement.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\UserControls\RatingElement.xaml.cs">
       <DependentUpon>RatingElement.xaml</DependentUpon>
@@ -137,9 +127,6 @@
     </Compile>
     <Compile Include="View\RegistracijaParkinga.xaml.cs">
       <DependentUpon>RegistracijaParkinga.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\UserControls\UserElement.xaml.cs">
-      <DependentUpon>UserElement.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -173,23 +160,8 @@
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Page>
-    <Page Include="View\Pocetna.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\DetaljiParkinga.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
+<<<<<<< HEAD
     <Page Include="View\ListaParkinga.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\Profil.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\UserControls\EditElement.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -198,18 +170,17 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\UserControls\ListaParkingElement.xaml">
+=======
+    <Page Include="View\Pocetna.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DetaljiParkinga.xaml">
+>>>>>>> 42e3730b6ab870d6f9a338083a4977b8fa96d991
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Prijava.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\UserControls\Parkinzi.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\UserControls\ProfilElement.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -222,10 +193,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\RegistracijaParkinga.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\UserControls\UserElement.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

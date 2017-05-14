@@ -1,0 +1,16 @@
+﻿<UserControl
+    x:Class="ParKing.View.UserControls.EditElement"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ParKing.View.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="50">
+
+    <RelativePanel>
+        <TextBlock Name="propertyTextBlock" FontFamily="Segoe MDL2 assets" Text="&#xE119;" RelativePanel.AlignVerticalCenterWithPanel="True" FontSize="50" Margin="10,0,0,0" Foreground="Gray"/>
+        <TextBox Name="propertyTextBox" Text="Property" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Background="Transparent" BorderBrush="Transparent" IsEnabled="False"/>
+        <HyperlinkButton Name="propertyHyperlinkButton" Content="edit" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="0,0,10,0"/>
+    </RelativePanel>
+</UserControl>
