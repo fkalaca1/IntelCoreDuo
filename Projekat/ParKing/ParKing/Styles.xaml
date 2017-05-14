@@ -3,6 +3,12 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:ParKing">
 
+    <Style TargetType="TextBlock" x:Name="TextBlockNaslovStyle">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Margin" Value="5,5,0,0"/>
+    </Style>
+
     <Style TargetType="TextBox" x:Name="TextBoxStyle">
 
         <Setter Property="Margin" Value="0,10,0,10" />

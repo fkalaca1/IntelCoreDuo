@@ -99,8 +99,20 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\ListaParkinga.xaml.cs">
+      <DependentUpon>ListaParkinga.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\ParkingPopup.xaml.cs">
+      <DependentUpon>ParkingPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\ListaParkingElement.xaml.cs">
+      <DependentUpon>ListaParkingElement.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Prijava.xaml.cs">
       <DependentUpon>Prijava.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\RatingElement.xaml.cs">
+      <DependentUpon>RatingElement.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Registracija.xaml.cs">
       <DependentUpon>Registracija.xaml</DependentUpon>
@@ -139,7 +151,23 @@
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Page>
+    <Page Include="View\ListaParkinga.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserControls\ParkingPopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserControls\ListaParkingElement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Prijava.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserControls\RatingElement.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
