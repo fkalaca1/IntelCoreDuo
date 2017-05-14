@@ -105,6 +105,13 @@
     <Compile Include="View\ListaParkinga.xaml.cs">
       <DependentUpon>ListaParkinga.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\MojeRezervacije.xaml.cs">
+      <DependentUpon>MojeRezervacije.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\ListaRezElement.xaml.cs">
+      <DependentUpon>ListaRezElement.xaml</DependentUpon>
+    </Compile>
+    </Compile>
     <Compile Include="View\Pocetna.xaml.cs">
       <DependentUpon>Pocetna.xaml</DependentUpon>
     </Compile>
@@ -164,6 +171,10 @@
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Page>
+    <Page Include="View\MojeRezervacije.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Pocetna.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -173,6 +184,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\ListaParkinga.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserControls\ListaRezElement.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
