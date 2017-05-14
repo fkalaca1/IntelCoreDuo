@@ -143,6 +143,7 @@
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Page>
+    <Page Include="View\Pocetna.xaml">
     <Page Include="View\DetaljiParkinga.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
