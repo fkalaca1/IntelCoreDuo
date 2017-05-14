@@ -99,25 +99,47 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< HEAD
+    <Compile Include="View\DetaljiParkinga.xaml.cs">
+      <DependentUpon>DetaljiParkinga.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ListaParkinga.xaml.cs">
       <DependentUpon>ListaParkinga.xaml</DependentUpon>
+    </Compile>
+<<<<<<< HEAD
+    <Compile Include="View\Profil.xaml.cs">
+      <DependentUpon>Profil.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\EditElement.xaml.cs">
+      <DependentUpon>EditElement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\ParkingPopup.xaml.cs">
+      <DependentUpon>ParkingPopup.xaml</DependentUpon>
+=======
+    <Compile Include="View\MojeRezervacije.xaml.cs">
+      <DependentUpon>MojeRezervacije.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\ListaRezElement.xaml.cs">
+      <DependentUpon>ListaRezElement.xaml</DependentUpon>
+    </Compile>
+>>>>>>> 7178b1f5bc0cd4e0ea72a2e127954be680d13c21
+    </Compile>
+    <Compile Include="View\Pocetna.xaml.cs">
+      <DependentUpon>Pocetna.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\UserControls\ParkingPopup.xaml.cs">
       <DependentUpon>ParkingPopup.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\UserControls\ListaParkingElement.xaml.cs">
       <DependentUpon>ListaParkingElement.xaml</DependentUpon>
-=======
-    <Compile Include="View\DetaljiParkinga.xaml.cs">
-      <DependentUpon>DetaljiParkinga.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\Pocetna.xaml.cs">
-      <DependentUpon>Pocetna.xaml</DependentUpon>
->>>>>>> 42e3730b6ab870d6f9a338083a4977b8fa96d991
     </Compile>
     <Compile Include="View\Prijava.xaml.cs">
       <DependentUpon>Prijava.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\Parkinzi.xaml.cs">
+      <DependentUpon>Parkinzi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\ProfilElement.xaml.cs">
+      <DependentUpon>ProfilElement.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\UserControls\RatingElement.xaml.cs">
       <DependentUpon>RatingElement.xaml</DependentUpon>
@@ -127,6 +149,17 @@
     </Compile>
     <Compile Include="View\RegistracijaParkinga.xaml.cs">
       <DependentUpon>RegistracijaParkinga.xaml</DependentUpon>
+    </Compile>
+<<<<<<< HEAD
+    <Compile Include="View\UserControls\UserElement.xaml.cs">
+      <DependentUpon>UserElement.xaml</DependentUpon>
+=======
+    <Compile Include="View\UserControls\DateTimeControl.xaml.cs">
+      <DependentUpon>DateTimeControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\UserMenu.xaml.cs">
+      <DependentUpon>UserMenu.xaml</DependentUpon>
+>>>>>>> 7178b1f5bc0cd4e0ea72a2e127954be680d13c21
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -160,8 +193,31 @@
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Page>
-<<<<<<< HEAD
+    <Page Include="View\MojeRezervacije.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pocetna.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DetaljiParkinga.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\ListaParkinga.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+<<<<<<< HEAD
+    <Page Include="View\Profil.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserControls\EditElement.xaml">
+=======
+    <Page Include="View\UserControls\ListaRezElement.xaml">
+>>>>>>> 7178b1f5bc0cd4e0ea72a2e127954be680d13c21
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -170,17 +226,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\UserControls\ListaParkingElement.xaml">
-=======
-    <Page Include="View\Pocetna.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\DetaljiParkinga.xaml">
->>>>>>> 42e3730b6ab870d6f9a338083a4977b8fa96d991
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Prijava.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserControls\Parkinzi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserControls\ProfilElement.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -196,7 +253,20 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+<<<<<<< HEAD
+    <Page Include="View\UserControls\UserElement.xaml">
+=======
+    <Page Include="View\UserControls\DateTimeControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserControls\UserMenu.xaml">
+>>>>>>> 7178b1f5bc0cd4e0ea72a2e127954be680d13c21
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
