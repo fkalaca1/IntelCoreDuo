@@ -99,11 +99,15 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\DetaljiParkinga.xaml.cs">
+      <DependentUpon>DetaljiParkinga.xaml</DependentUpon>
     <Compile Include="View\ListaParkinga.xaml.cs">
       <DependentUpon>ListaParkinga.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\UserControls\ParkingPopup.xaml.cs">
       <DependentUpon>ParkingPopup.xaml</DependentUpon>
+    <Compile Include="View\Pocetna.xaml.cs">
+      <DependentUpon>Pocetna.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\UserControls\ListaParkingElement.xaml.cs">
       <DependentUpon>ListaParkingElement.xaml</DependentUpon>
@@ -128,6 +132,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\parkingLogo.png" />
+    <Content Include="Assets\testpark.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -150,6 +155,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="View\Pocetna.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DetaljiParkinga.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\ListaParkinga.xaml">
       <SubType>Designer</SubType>
