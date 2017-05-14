@@ -6,25 +6,33 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Height="50">
+    Height="55">
+    
+    <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
 
-    <StackPanel Orientation="Horizontal">
+            <Button Style="{StaticResource DateTimeControlButton}" BorderThickness="0" x:Name="OdButton">
+            <StackPanel>
+                <TextBlock Text="Od" HorizontalAlignment="Center"/>
+                <TextBlock x:Name="OdTextBlock" Text="14 May 2017 13:00" />
+            </StackPanel>
 
-        <StackPanel Orientation="Horizontal" Background="White">
-
-            <Button Style="{StaticResource DateTimeControlButton}" Content="Od" BorderThickness="0" x:Name="OdButton">
-                <Button.Flyout>
-                    <DatePickerFlyout x:Name="OdDatePickerFlyout"  DatePicked="DatePickerFlyout_DatePicked" Placement="Full"/>
+            <Button.Flyout>
+                    <DatePickerFlyout MonthFormat="{}{month.abbreviated(3)}" x:Name="OdDatePickerFlyout"  DatePicked="DatePickerFlyout_DatePicked" Placement="Full"/>
                 </Button.Flyout>
             </Button>
 
-            <Button Style="{StaticResource DateTimeControlButton}" Content="Do" BorderThickness="0" x:Name="DoButton">
-                <Button.Flyout>
-                    <DatePickerFlyout x:Name="DoDatePickerFlyout"  DatePicked="DatePickerFlyout_DatePicked" Placement="Full"/>
+            <Button Grid.Column="1" Style="{StaticResource DateTimeControlButton}" BorderThickness="0" x:Name="DoButton">
+                <StackPanel>
+                    <TextBlock Text="Do" HorizontalAlignment="Center"/>
+                    <TextBlock x:Name="DoTextBlock" Text="14 May 2017 14:00" />
+                </StackPanel>
+            <Button.Flyout>
+                    <DatePickerFlyout x:Name="DoDatePickerFlyout"  DatePicked="DoDatePickerFlyout_DatePicked" Placement="Full"/>
                 </Button.Flyout>
             </Button>
-
-        </StackPanel>
-
-    </StackPanel>
+        </Grid>
 </UserControl>

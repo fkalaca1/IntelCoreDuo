@@ -26,9 +26,24 @@ namespace ParKing.View.UserControls
 
         private void DatePickerFlyout_DatePicked(DatePickerFlyout sender, DatePickedEventArgs args)
         {
+            var dateTimePicker = sender;
+
             var timepicker = new TimePickerFlyout();
             timepicker.Placement = FlyoutPlacementMode.Full;
             timepicker.ShowAt(OdButton);
+
+            OdTextBlock.Text = dateTimePicker.Date.Day.ToString() + "/" + dateTimePicker.Date.Month.ToString() + "/" + dateTimePicker.Date.Year.ToString() + "  " + timepicker.Time.ToString();
+        }
+
+        private void DoDatePickerFlyout_DatePicked(DatePickerFlyout sender, DatePickedEventArgs args)
+        {
+            var dateTimePicker = sender;
+
+            var timepicker = new TimePickerFlyout();
+            timepicker.Placement = FlyoutPlacementMode.Full;
+            timepicker.ShowAt(OdButton);
+
+            DoTextBlock.Text = dateTimePicker.Date.Day.ToString() + "/" + dateTimePicker.Date.Month.ToString() + "/" + dateTimePicker.Date.Year.ToString() + "  " + timepicker.Time.ToString();
         }
     }
 }
