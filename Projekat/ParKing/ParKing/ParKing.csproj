@@ -102,6 +102,9 @@
     <Compile Include="View\DetaljiParkinga.xaml.cs">
       <DependentUpon>DetaljiParkinga.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Pocetna.xaml.cs">
+      <DependentUpon>Pocetna.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Prijava.xaml.cs">
       <DependentUpon>Prijava.xaml</DependentUpon>
     </Compile>
@@ -144,6 +147,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Page>
     <Page Include="View\Pocetna.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\DetaljiParkinga.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
