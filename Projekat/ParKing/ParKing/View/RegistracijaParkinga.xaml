@@ -38,7 +38,7 @@
             x:Name="radioButtonGaraza" 
             Content="Garaza" Grid.Column="1" HorizontalAlignment="Left" Margin="23,4,0,0" Grid.Row="3" VerticalAlignment="Center"/>
                 <RadioButton 
-            Grid.Column="1" Style="{StaticResource RadioDugme}" x:Name="radioButtonOtvoreno" Content="Otvoreno" HorizontalAlignment="Left" Margin="130,4,0,0" Grid.Row="3" VerticalAlignment="Center"/>
+            Grid.Column="1" Style="{StaticResource RadioDugme}" x:Name="radioButtonOtvoreno" Content="Otvoreno" HorizontalAlignment="Left" Margin="0,4,0,0" Grid.Row="3" VerticalAlignment="Center"/>
 
             </StackPanel>
 
