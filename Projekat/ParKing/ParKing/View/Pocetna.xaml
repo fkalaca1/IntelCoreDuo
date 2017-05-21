@@ -16,7 +16,7 @@
         </Grid.RowDefinitions>
 
         <RelativePanel Background="#147ad4">
-            <Button x:Name="HamburgerButton" FontSize="24" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" RelativePanel.AlignLeftWithPanel="True" Click="HamburgerButton_Click"/>
+            <Button x:Name="HamburgerButton" FontSize="25" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" RelativePanel.AlignLeftWithPanel="True" Click="HamburgerButton_Click"/>
             <TextBlock Style="{StaticResource TextBlockNaslovStyle}" Text="Pocetna" RelativePanel.RightOf="HamburgerButton" />
             <SearchBox Margin="0,2,0,0" Padding="0,0,10,0" Width="250" FontSize="20" RelativePanel.AlignRightWithPanel="True" PlaceholderText="Trazi"/>
         </RelativePanel>
