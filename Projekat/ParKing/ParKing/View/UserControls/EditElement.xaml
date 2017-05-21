@@ -6,11 +6,12 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    d:DesignHeight="50">
+    d:DesignHeight="50"
+    x:Name="property">
 
     <RelativePanel>
-        <TextBlock Name="propertyTextBlock" FontFamily="Segoe MDL2 assets" Text="&#xE119;" RelativePanel.AlignVerticalCenterWithPanel="True" FontSize="50" Margin="10,0,0,0" Foreground="Gray"/>
-        <TextBox Name="propertyTextBox" Text="Property" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Background="Transparent" BorderBrush="Transparent" IsEnabled="False"/>
+        <TextBlock Name="propertyTextBlock" FontFamily="Segoe MDL2 assets" Text="{Binding Path=PropertyTextBlock, ElementName=property}" RelativePanel.AlignVerticalCenterWithPanel="True" FontSize="50" Margin="10,0,0,0" Foreground="Gray"/>
+        <TextBox Name="propertyTextBox" Text="{Binding Path=PropertyTextBox, ElementName=property}" RelativePanel.RightOf="propertyTextBlock" RelativePanel.LeftOf="propertyHyperlinkButton" RelativePanel.AlignVerticalCenterWithPanel="True" Background="Transparent" BorderBrush="Transparent" IsEnabled="False" Margin="10,0,10,0" TextAlignment="Center"/>
         <HyperlinkButton Name="propertyHyperlinkButton" Content="edit" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="0,0,10,0"/>
     </RelativePanel>
 </UserControl>

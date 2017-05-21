@@ -51,12 +51,9 @@
 
             <StackPanel x:Name="Detalji" Grid.Row="3" Grid.Column="1">
             
-            <Border BorderBrush="White" BorderThickness="1" Margin="5">
-            <TextBlock 
-            x:Name="textBlockOcjena"         
-            Text="Ocjena" 
-            Style="{StaticResource TekstStranice2}"/>
-            </Border>
+            <Border BorderBrush="White" BorderThickness="1" Margin="5" Height="25">
+                    <local:RatingElement Width="125" HorizontalAlignment="Left" RateValue="0.5"/>
+                </Border>
 
             <Border BorderBrush="White" BorderThickness="1" Margin="5">
             <TextBlock 

@@ -23,5 +23,7 @@ namespace ParKing.View.UserControls
         {
             this.InitializeComponent();
         }
+        public String MailTextBlock { get { return (String)GetValue(MailTextBlockProperty); } set { SetValue(MailTextBlockProperty, value); } }
+        public static readonly DependencyProperty MailTextBlockProperty = DependencyProperty.Register("MailTextBlock", typeof(string), typeof(UserElement), new PropertyMetadata(""));
     }
 }
