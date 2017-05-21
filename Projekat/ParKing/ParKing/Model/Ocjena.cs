@@ -8,13 +8,11 @@ using System.Threading.Tasks;
 
 namespace ParKing.Model
 {
-    class Ocjena
+    public class Ocjena : INotifyPropertyChanged
     {
         private int ocjenaP;
         private String komentar;
         private Parking maticni;
-
-        public event PropertyChangedEventHandler PropertyChanged;
 
         public Ocjena(int ocjenaP, String komentar, Parking maticni)
         {
@@ -31,12 +29,18 @@ namespace ParKing.Model
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
         public bool Set<T>(ref T storage, T value, [CallerMemberName] String propertyName = null)
         {
-            if (Equals(storage, value)) return false;
+            if (Equals(storage, value))
+                return false;
+
             storage = value;
             OnPropertyChanged(propertyName);
             return true;
         }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
     }
 }

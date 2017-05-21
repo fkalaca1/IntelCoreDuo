@@ -8,23 +8,35 @@ using System.Threading.Tasks;
 
 namespace ParKing.Model
 {
-    class Izvjestaj
+    public class Izvjestaj
     {
         private double prihod;
         private int promet;
         private ParkingRezervacija maticni;
-
-        public event PropertyChangedEventHandler PropertyChanged;
 
         public Izvjestaj(double prihod, int promet, ParkingRezervacija maticni)
         {
             this.prihod = prihod;
             this.promet = promet;
             this.maticni = maticni;
+
+        //geteri seteri
+        public double Prihod
+        {
+            get { return prihod; }
+            set
+            {
+                Set(ref prihod, value);
+            }
         }
 
-        public double Prihod { get { return prihod; } set { Set(ref prihod, value); } }
-        public int Promet { get { return promet; } set { Set(ref promet, value); } }
+        public int Promet
+        {
+            get { return promet; }
+            set
+            {
+                Set(ref promet, value);
+            }
         public ParkingRezervacija Maticni { get { return maticni; } set { Set(ref maticni, value); } }
 
         protected virtual void OnPropertyChanged(String propertyName)
@@ -38,5 +50,8 @@ namespace ParKing.Model
             OnPropertyChanged(propertyName);
             return true;
         }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
     }
 }
