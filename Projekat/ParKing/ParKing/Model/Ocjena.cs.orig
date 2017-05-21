@@ -8,38 +8,80 @@ using System.Threading.Tasks;
 
 namespace ParKing.Model
 {
-    public class Ocjena
+<<<<<<< HEAD
+    class Ocjena
     {
         private int ocjenaP;
         private String komentar;
         private Parking maticni;
-        private User ocjenitelj;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public Ocjena(int ocjenaP, String komentar, Parking maticni, User ocjenitelj)
+        public Ocjena(int ocjenaP, String komentar, Parking maticni)
         {
             this.ocjenaP = ocjenaP;
             this.komentar = komentar;
             this.maticni = maticni;
-            this.ocjenitelj = ocjenitelj;
         }
 
         public int OcjenaP { get { return ocjenaP; } set { Set(ref ocjenaP, value); } }
         public String Komentar { get { return komentar; } set { Set(ref komentar, value); } }
         public Parking Maticni { get { return maticni; } set { Set(ref maticni, value); } }
-        public User Ocjenitelj { get { return ocjenitelj; } set { Set(ref ocjenitelj, value); } }
+=======
+    public class Ocjena : INotifyPropertyChanged
+    {
+        private double ocjenaVrijednost;
+        private String kometar;
+
+        public Ocjena()
+        {
+
+        }
+        public String Komentar
+        {
+            get { return kometar; }
+            set
+            {
+                Set(ref kometar, value);
+            }
+        }
+
+        public double OcjenaVr
+        {
+            get { return ocjenaVrijednost; }
+            set
+            {
+                Set(ref ocjenaVrijednost, value);
+            }
+        }
+
+>>>>>>> 0ad3a2453ca1daf854f15158c41d75bb89a57933
 
         protected virtual void OnPropertyChanged(String propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+<<<<<<< HEAD
         public bool Set<T>(ref T storage, T value, [CallerMemberName] String propertyName = null)
         {
             if (Equals(storage, value)) return false;
+=======
+
+        public bool Set<T>(ref T storage, T value, [CallerMemberName] String propertyName = null)
+        {
+            if (Equals(storage, value))
+                return false;
+
+>>>>>>> 0ad3a2453ca1daf854f15158c41d75bb89a57933
             storage = value;
             OnPropertyChanged(propertyName);
             return true;
         }
+<<<<<<< HEAD
+=======
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+>>>>>>> 0ad3a2453ca1daf854f15158c41d75bb89a57933
     }
 }

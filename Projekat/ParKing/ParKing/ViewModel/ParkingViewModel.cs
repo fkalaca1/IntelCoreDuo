@@ -21,16 +21,8 @@ namespace ParKing.ViewModel
             tmp.Adresa = "Lozionicka";
             tmp.Cijena=2.5;
             tmp.Kapacitet = 100;
-            tmp.Telefon = "000111222";
-            Ocjena o = new Ocjena();
-            o.OcjenaVr = 0.7;
-            o.Komentar = "dobar parking";
-            tmp.OcjenaVrijednost = o;
             Image slika = new Image();
             Uri imageUri = new Uri("ms-appx:///Assets/testpark.png");
-            slika.Source = new BitmapImage(imageUri);
-            tmp.Slika = slika;
-
             p.Add(tmp);
             Parkinzi = p;
             parking = tmp;

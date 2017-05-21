@@ -15,22 +15,20 @@ namespace ParKing.Model
         private int kapacitet;
         private double cijena;
         private List<Ocjena> ocjene;
-        private Image slika;
-        private String telefon;
 
         public Parking()
         {
 
         }
-        //geteri seteri
-        public String Telefon
+
+        public Parking(String adresa, int kapacitet, List<Ocjena> ocjene, double cijena)
         {
-            get { return telefon; }
-            set
-            {
-                Set(ref telefon, value);
-            }
+            this.adresa = adresa;
+            this.kapacitet = kapacitet;
+            this.cijena = cijena;
+            this.ocjene = ocjene;
         }
+        //geteri seteri
         public String Adresa
         {
             get { return adresa; }
@@ -57,21 +55,12 @@ namespace ParKing.Model
         }
         public List<Ocjena> Ocjene
         {
-            get { return ocjena; }
+            get { return ocjene; }
             set
             {
-                Set(ref ocjena, value);
+                Set(ref ocjene, value);
             }
         }
-        public Image Slika
-        {
-            get { return slika; }
-            set
-            {
-                Set(ref slika, value);
-            }
-        }
-
 
         protected virtual void OnPropertyChanged(String propertyName)
         {

@@ -103,12 +103,11 @@
     <Compile Include="Model\Ocjena.cs" />
     <Compile Include="Model\Parking.cs" />
     <Compile Include="Model\ParkingRezervacija.cs" />
-    <Compile Include="Model\RadnikNaParkingu.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Model\VlasnikParkinga.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModel\UserViewModel.cs" />
     <Compile Include="ViewModel\ParkingViewModel.cs" />
+    <Compile Include="ViewModel\UserViewModel.cs" />
     <Compile Include="View\DetaljiParkinga.xaml.cs">
       <DependentUpon>DetaljiParkinga.xaml</DependentUpon>
     </Compile>

@@ -98,30 +98,42 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+    <Compile Include="Model\Administrator.cs" />
+    <Compile Include="Model\Gost.cs" />
+=======
+>>>>>>> 0ad3a2453ca1daf854f15158c41d75bb89a57933
+    <Compile Include="Model\Izvjestaj.cs" />
+    <Compile Include="Model\Ocjena.cs" />
+    <Compile Include="Model\Parking.cs" />
+    <Compile Include="Model\ParkingRezervacija.cs" />
+<<<<<<< HEAD
+    <Compile Include="Model\RadnikNaParkingu.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Model\VlasnikParkinga.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\UserViewModel.cs" />
+=======
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\ParkingViewModel.cs" />
+>>>>>>> 0ad3a2453ca1daf854f15158c41d75bb89a57933
     <Compile Include="View\DetaljiParkinga.xaml.cs">
       <DependentUpon>DetaljiParkinga.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ListaParkinga.xaml.cs">
       <DependentUpon>ListaParkinga.xaml</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="View\Profil.xaml.cs">
       <DependentUpon>Profil.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MojeRezervacije.xaml.cs">
+      <DependentUpon>MojeRezervacije.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\UserControls\EditElement.xaml.cs">
       <DependentUpon>EditElement.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\UserControls\ParkingPopup.xaml.cs">
-      <DependentUpon>ParkingPopup.xaml</DependentUpon>
-=======
-    <Compile Include="View\MojeRezervacije.xaml.cs">
-      <DependentUpon>MojeRezervacije.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\UserControls\ListaRezElement.xaml.cs">
       <DependentUpon>ListaRezElement.xaml</DependentUpon>
-    </Compile>
->>>>>>> 7178b1f5bc0cd4e0ea72a2e127954be680d13c21
     </Compile>
     <Compile Include="View\Pocetna.xaml.cs">
       <DependentUpon>Pocetna.xaml</DependentUpon>
@@ -150,16 +162,14 @@
     <Compile Include="View\RegistracijaParkinga.xaml.cs">
       <DependentUpon>RegistracijaParkinga.xaml</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="View\UserControls\UserElement.xaml.cs">
       <DependentUpon>UserElement.xaml</DependentUpon>
-=======
+    </Compile>
     <Compile Include="View\UserControls\DateTimeControl.xaml.cs">
       <DependentUpon>DateTimeControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\UserControls\UserMenu.xaml.cs">
       <DependentUpon>UserMenu.xaml</DependentUpon>
->>>>>>> 7178b1f5bc0cd4e0ea72a2e127954be680d13c21
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -209,15 +219,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-<<<<<<< HEAD
     <Page Include="View\Profil.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\UserControls\EditElement.xaml">
-=======
     <Page Include="View\UserControls\ListaRezElement.xaml">
->>>>>>> 7178b1f5bc0cd4e0ea72a2e127954be680d13c21
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserControls\EditElement.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -253,15 +263,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-<<<<<<< HEAD
     <Page Include="View\UserControls\UserElement.xaml">
-=======
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\UserControls\DateTimeControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\UserControls\UserMenu.xaml">
->>>>>>> 7178b1f5bc0cd4e0ea72a2e127954be680d13c21
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

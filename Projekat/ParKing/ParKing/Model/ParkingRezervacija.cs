@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace ParKing.Model
 {
-    class ParkingRezervacija : Parking
+    public class ParkingRezervacija : Parking
     {
-        private Izvjestaj izvjestaj;
+        private Izvjestaj izvjestajP;
+        private String brojTelefona;
         private int brojZauzetihMjesta;
         private int brojMjestaZaRezervaciju;
         private int brojZauzetihMjestaZaRezervaciju;
@@ -20,35 +21,14 @@ namespace ParKing.Model
             this.izvjestajP = izvjestajP;
             this.brojTelefona = brojTelefona;
             this.brojZauzetihMjesta = brojZauzetihMjesta;
-            this.brojMjestaZR = brojMjestaZR;
-            this.brojZauzetihMjestaZR = brojZauzetihMjestaZR;
+            this.brojMjestaZaRezervaciju = brojMjestaZR;
+            this.brojZauzetihMjestaZaRezervaciju = brojZauzetihMjestaZR;
         }
 
         public Izvjestaj IzvjestajP { get { return izvjestajP; } set { Set(ref izvjestajP, value); } }
         public String BrojTelefona { get { return brojTelefona; } set { Set(ref brojTelefona, value); } }
         public int BrojZauzetihMjesta { get { return brojZauzetihMjesta; } set { Set(ref brojZauzetihMjesta, value); } }
-        public int BrojMjestaZR { get { return brojMjestaZR; } set { Set(ref brojMjestaZR, value); } }
-        public int BrojZauzetihMjestaZR { get { return brojZauzetihMjestaZR; } set { Set(ref brojZauzetihMjestaZR, value); } }
-    }
-}
-            }
-        }
-        public int BrojZauzetihMjestaZaRezervaciju
-        {
-            get { return brojZauzetihMjestaZaRezervaciju; }
-            set
-            {
-                Set(ref brojZauzetihMjestaZaRezervaciju, value);
-            }
-        }
-        public Izvjestaj Izvjestaj
-        {
-            get { return izvjestaj; }
-            set
-            {
-                Set(ref izvjestaj, value);
-            }
-        }
-
+        public int BrojMjestaZR { get { return brojMjestaZaRezervaciju; } set { Set(ref brojMjestaZaRezervaciju, value); } }
+        public int BrojZauzetihMjestaZR { get { return brojZauzetihMjestaZaRezervaciju; } set { Set(ref brojZauzetihMjestaZaRezervaciju, value); } }
     }
 }
