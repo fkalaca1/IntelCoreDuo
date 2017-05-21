@@ -14,12 +14,13 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <RelativePanel Grid.Row="0" Background="#147ad4">
-            <Button x:Name="BackButton" VerticalAlignment="Top"
-              Style="{StaticResource BackButtonStyle}"
-              Command="{Binding Path=Back}"
+            <Button x:Name="BackButton"
+            VerticalAlignment="Top"
+            Style="{StaticResource BackButtonStyle}"
+            Command="{Binding Path=Back}"
             />
-            <Button Name="backButton" FontFamily="Segoe MDL2 Assets" Content="&#xE112;" RelativePanel.AlignLeftWithPanel="True"/>
-            <TextBlock Style="{StaticResource TextBlockNaslovStyle}" Name="naslovTextBlock" Text="Moje rezervacije" RelativePanel.RightOf="backButton"/>
+            
+            <TextBlock Style="{StaticResource TextBlockNaslovStyle}" Name="naslovTextBlock" Text="Moje rezervacije" RelativePanel.RightOf="BackButton"/>
          </RelativePanel>
         <RelativePanel Grid.Row="1">
             <ListBox ItemsSource="{Binding Rezervacije}">
