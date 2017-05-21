@@ -25,6 +25,7 @@ namespace ParKing.View
         public MojeRezervacije()
         {
             this.InitializeComponent();
+            this.DataContext = new ViewModel.RezervacijaViewModel();
         }
     }
 }
