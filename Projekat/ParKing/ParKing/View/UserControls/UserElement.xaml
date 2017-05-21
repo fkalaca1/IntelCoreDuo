@@ -6,10 +6,11 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Height="200">
+    Height="200"
+    x:Name="profilnaIMail">
 
     <RelativePanel>
         <Image Name="profilnaImage" RelativePanel.AlignHorizontalCenterWithPanel="True" Source="ms-appx:///Assets/Square44x44Logo.scale-200.png" Stretch="Fill" Margin="0,25,0,0" Width="120" Height="120"/>
-        <TextBlock Name="mailTextBlock" Text="example@example.com" RelativePanel.Below="profilnaImage" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="0,20,0,0"/>
+        <TextBlock Name="mailTextBlock" Text="{Binding Path=MailTextBlock, ElementName=profilnaIMail}" RelativePanel.Below="profilnaImage" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="0,20,0,0"/>
     </RelativePanel>
 </UserControl>

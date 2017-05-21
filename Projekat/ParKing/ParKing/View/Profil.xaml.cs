@@ -25,6 +25,7 @@ namespace ParKing.View
         public Profil()
         {
             this.InitializeComponent();
+            DataContext = new ViewModel.UserViewModel();
         }
 
         private void profilButton_Click(object sender, RoutedEventArgs e)

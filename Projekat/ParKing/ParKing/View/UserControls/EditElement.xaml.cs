@@ -23,5 +23,9 @@ namespace ParKing.View.UserControls
         {
             this.InitializeComponent();
         }
+        public String PropertyTextBox { get { return (String)GetValue(TextBoxTextProperty); } set { SetValue(TextBoxTextProperty, value); } }
+        public String PropertyTextBlock { get { return (String)GetValue(TextBlockTextProperty); } set { SetValue(TextBlockTextProperty, value); } }
+        public static readonly DependencyProperty TextBlockTextProperty = DependencyProperty.Register("PropertyTextBlock", typeof(string), typeof(EditElement), new PropertyMetadata(""));
+        public static readonly DependencyProperty TextBoxTextProperty = DependencyProperty.Register("PropertyTextBox", typeof(string), typeof(EditElement), new PropertyMetadata(""));
     }
 }

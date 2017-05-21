@@ -1,0 +1,85 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ParKing.Model
+{
+<<<<<<< HEAD
+    class Izvjestaj
+    {
+        private double prihod;
+        private int promet;
+        private ParkingRezervacija maticni;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public Izvjestaj(double prihod, int promet, ParkingRezervacija maticni)
+        {
+            this.prihod = prihod;
+            this.promet = promet;
+            this.maticni = maticni;
+        }
+
+        public double Prihod { get { return prihod; } set { Set(ref prihod, value); } }
+        public int Promet { get { return promet; } set { Set(ref promet, value); } }
+        public ParkingRezervacija Maticni { get { return maticni; } set { Set(ref maticni, value); } }
+=======
+    public class Izvjestaj
+    {
+        private double prihod;
+        private int promet;
+
+        //geteri seteri
+        public double Prihod
+        {
+            get { return prihod; }
+            set
+            {
+                Set(ref prihod, value);
+            }
+        }
+
+        public int Promet
+        {
+            get { return promet; }
+            set
+            {
+                Set(ref promet, value);
+            }
+        }
+
+
+>>>>>>> 0ad3a2453ca1daf854f15158c41d75bb89a57933
+
+        protected virtual void OnPropertyChanged(String propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+<<<<<<< HEAD
+        public bool Set<T>(ref T storage, T value, [CallerMemberName] String propertyName = null)
+        {
+            if (Equals(storage, value)) return false;
+=======
+
+        public bool Set<T>(ref T storage, T value, [CallerMemberName] String propertyName = null)
+        {
+            if (Equals(storage, value))
+                return false;
+
+>>>>>>> 0ad3a2453ca1daf854f15158c41d75bb89a57933
+            storage = value;
+            OnPropertyChanged(propertyName);
+            return true;
+        }
+<<<<<<< HEAD
+=======
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+>>>>>>> 0ad3a2453ca1daf854f15158c41d75bb89a57933
+    }
+}

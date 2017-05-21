@@ -22,6 +22,7 @@ namespace ParKing.View.UserControls
         public ProfilElement()
         {
             this.InitializeComponent();
+            this.DataContext = new ViewModel.UserViewModel();
         }
     }
 }

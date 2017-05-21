@@ -6,11 +6,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel>
+            <local:EditElement PropertyTextBlock="&#xE119;" PropertyTextBox="{Binding User.Email}"/>
+            <local:EditElement PropertyTextBlock="&#xE13A;" PropertyTextBox="{Binding User.BrojTelefona}"/>
+            <local:EditElement PropertyTextBlock="&#xE8D7;" PropertyTextBox="Lozinka"/>
+            <local:EditElement PropertyTextBlock="&#xE90E;" PropertyTextBox="Metode placanja"/>
+        </StackPanel>
+    </ScrollViewer>
 
-    <StackPanel>
-        <local:EditElement/>
-        <local:EditElement/>
-        <local:EditElement/>
-        <local:EditElement/>
-    </StackPanel>
 </UserControl>
