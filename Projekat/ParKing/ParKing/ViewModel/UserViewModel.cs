@@ -14,11 +14,24 @@ namespace ParKing.ViewModel
         public UserViewModel()
         {
             List<Parking> parkinzi = new List<Parking>();
+            List<Ocjena> ocjene = new List<Ocjena>();
+            ParkingRezervacija temp = new ParkingRezervacija();
+            ocjene.Add(new Ocjena(4, "Top parking", temp, User));
+            ocjene.Add(new Ocjena(4, "Top parking hue", temp, User));
+            ocjene.Add(new Ocjena(5, "Top parking hahaha", temp, User));
+            temp.Adresa = "Teheranski trg 14";
+            temp.Cijena = 2.5;
+            temp.Kapacitet = 40;
+            temp.Ocjene = ocjene;
+            temp.BrojTelefona = "062/157-463";
+            temp.BrojZauzetihMjesta = 23;
+            parkinzi.Add(temp); 
+            List<Rezervacija> rezervacije = new List<Rezervacija>();
             //kupljenje parkinga iz baze
-            User temp;
-            if (parkinzi.Count != 0) temp = new VlasnikParkinga("riktash38@gmail.com", "062/157-463", "huehuehue", parkinzi);
-            else temp = new User("riktash38@gmail.com", "062/157-463", "huehuehue");
-            User = temp;
+            User tempU;
+            if (parkinzi.Count != 0) tempU = new VlasnikParkinga("riktash38@gmail.com", "062/157-463", "huehuehue", parkinzi, rezervacije);
+            else tempU = new User("riktash38@gmail.com", "062/157-463", "huehuehue", rezervacije);
+            User = tempU;
         }
     }
 }

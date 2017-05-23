@@ -9,15 +9,19 @@
     mc:Ignorable="d"
     d:DesignHeight="300">
 
-    <ListBox>
-        <ListBoxItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
-            <Button Name="dodajButton" HorizontalAlignment="Stretch" Content="Registruj parking"/>
-        </ListBoxItem>
-        <ListBoxItem HorizontalContentAlignment="Stretch">
-            <my:ListaParkingElement/>
-        </ListBoxItem>
-        <ListBoxItem HorizontalContentAlignment="Stretch">
-            <my:ListaParkingElement/>
-        </ListBoxItem>
+    <ListBox ItemsSource="{Binding User.MojiParkinzi}" HorizontalContentAlignment="Stretch">
+        <ListBox.ItemContainerStyle>
+            <Style TargetType="ListBoxItem">
+                <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+                <Setter Property="VerticalContentAlignment" Value="Stretch"></Setter>
+                <Setter Property="Background" Value="White"></Setter>
+            </Style>
+        </ListBox.ItemContainerStyle>
+        <ListBox.ItemTemplate>
+            <DataTemplate>
+                <my:ListaParkingElement AdresaTextBlock="{Binding Path=Adresa}" BrTelefonaHyperlingButton="{Binding Path=BrojTelefona}" RatingP="{Binding Path=Prosjek}" RatingTextBlock="{Binding Path=BrOcjena}"
+                                        CijenaTextBlock="{Binding Path=DajCijenu}" KapacitetTextBlock="{Binding Path=KapacitetP}"/>
+            </DataTemplate>
+        </ListBox.ItemTemplate>
     </ListBox>
 </UserControl>

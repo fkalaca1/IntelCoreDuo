@@ -13,22 +13,22 @@ namespace ParKing.Model
         private String email;
         private String brojTelefona;
         private String sifra;
-        //private List<Rezervacija> mojeRezervacije;
+        private List<Rezervacija> mojeRezervacije;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public User(String email, String brojTelefona, String sifra/*, Lista<Rezervacija> mojeRezervacije*/)
+        public User(String email, String brojTelefona, String sifra, List<Rezervacija> mojeRezervacije)
         {
             this.email = email;
             this.brojTelefona = brojTelefona;
             this.sifra = sifra;
-            //mojeRezervacije = MojeRezervacije;
+            mojeRezervacije = MojeRezervacije;
         }
 
         public String Email { get { return email; } set { Set(ref email, value); } }
         public String BrojTelefona { get { return brojTelefona; } set { Set(ref brojTelefona, value); } }
         public String Sifra { get { return sifra; } set { Set(ref sifra, value); } }
-        //public List<Rezervacija> MojeRezervacije { get { return mojeRezervacije; } set { mojeRezervacije = value; } }
+        public List<Rezervacija> MojeRezervacije { get { return mojeRezervacije; } set { mojeRezervacije = value; } }
 
         protected virtual void OnPropertyChanged(String propertyName)
         {

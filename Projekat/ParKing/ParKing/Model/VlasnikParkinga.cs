@@ -9,7 +9,7 @@ namespace ParKing.Model
     class VlasnikParkinga : User
     {
         private List<Parking> mojiParkinzi;
-        public VlasnikParkinga(string email, string brojTelefona, string sifra, List<Parking> mojiParkinzi) : base(email, brojTelefona, sifra)
+        public VlasnikParkinga(string email, string brojTelefona, string sifra, List<Parking> mojiParkinzi, List<Rezervacija> rezervacije) : base(email, brojTelefona, sifra, rezervacije)
         {
             this.mojiParkinzi = mojiParkinzi;
         }

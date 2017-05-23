@@ -13,7 +13,11 @@ namespace ParKing.Model
         private int brojZauzetihMjesta;
         private int brojMjestaZaRezervaciju;
         private int brojZauzetihMjestaZaRezervaciju;
-       // private String telefon;
+
+        public ParkingRezervacija()
+        {
+
+        }
 
         public ParkingRezervacija(string adresa, int kapacitet, List<Ocjena> ocjene, int cijena, Izvjestaj izvjestajP,
             String brojTelefona, int brojZauzetihMjesta, int brojMjestaZR, int brojZauzetihMjestaZR) : base(adresa, kapacitet, ocjene, cijena)
@@ -30,5 +34,12 @@ namespace ParKing.Model
         public int BrojZauzetihMjesta { get { return brojZauzetihMjesta; } set { Set(ref brojZauzetihMjesta, value); } }
         public int BrojMjestaZR { get { return brojMjestaZaRezervaciju; } set { Set(ref brojMjestaZaRezervaciju, value); } }
         public int BrojZauzetihMjestaZR { get { return brojZauzetihMjestaZaRezervaciju; } set { Set(ref brojZauzetihMjestaZaRezervaciju, value); } }
+        public override string KapacitetP
+        {
+            get
+            {
+                return "(" + brojZauzetihMjesta + "/" + Kapacitet + ")";
+            }
+        }
     }
 }

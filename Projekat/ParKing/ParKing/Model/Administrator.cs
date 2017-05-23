@@ -8,7 +8,7 @@ namespace ParKing.Model
 {
     class Administrator : User
     {
-        public Administrator(string email, string brojTelefona, string sifra) : base(email, brojTelefona, sifra)
+        public Administrator(string email, string brojTelefona, string sifra, List<Rezervacija> rezervacije) : base(email, brojTelefona, sifra, rezervacije)
         {
         }
     }

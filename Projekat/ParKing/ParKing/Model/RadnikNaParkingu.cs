@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ParKing.Model
 {
-    class RadnikNaParkingu //: User, INotifyPropertyChanged
+    class RadnikNaParkingu : User, INotifyPropertyChanged
     {
-        /*private Parking radnoMjesto;
-        public RadnikNaParkingu(string email, string brojTelefona, string sifra, Parking radnoMjesto) : base(email, brojTelefona, sifra)
+        private Parking radnoMjesto;
+        public RadnikNaParkingu(string email, string brojTelefona, string sifra, List<Rezervacija> rezervacije, Parking radnoMjesto) : base(email, brojTelefona, sifra, rezervacije)
         {
             this.radnoMjesto = radnoMjesto;
         }
@@ -31,6 +32,6 @@ namespace ParKing.Model
             storage = value;
             OnPropertyChanged(propertyName);
             return true;
-        }*/
+        }
     }
 }

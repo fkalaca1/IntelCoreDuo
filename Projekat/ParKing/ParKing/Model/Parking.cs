@@ -29,6 +29,9 @@ namespace ParKing.Model
             this.ocjene = ocjene;
         }
         //geteri seteri
+
+        public virtual String KapacitetP { get { return "(-/" + kapacitet + ")"; } }
+
         public String Adresa
         {
             get { return adresa; }
@@ -53,6 +56,9 @@ namespace ParKing.Model
                 Set(ref cijena, value);
             }
         }
+
+        public String DajCijenu { get { return Cijena.ToString() + " KM"; } }
+
         public List<Ocjena> Ocjene
         {
             get { return ocjene; }
@@ -61,6 +67,21 @@ namespace ParKing.Model
                 Set(ref ocjene, value);
             }
         }
+
+        public double Prosjek
+        {
+            get
+            {
+                double povratna = 0;
+                for (int i = 0; i < ocjene.Count; i++)
+                {
+                    povratna += ocjene[i].OcjenaP;
+                }
+                return povratna / (5 * ocjene.Count);
+            }
+        }
+
+        public String BrOcjena { get { return "(" + ocjene.Count + ")"; } }
 
         protected virtual void OnPropertyChanged(String propertyName)
         {

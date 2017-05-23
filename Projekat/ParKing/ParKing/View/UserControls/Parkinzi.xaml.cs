@@ -22,6 +22,7 @@ namespace ParKing.View.UserControls
         public Parkinzi()
         {
             this.InitializeComponent();
+            DataContext = new ViewModel.UserViewModel();
         }
     }
 }

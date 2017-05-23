@@ -6,7 +6,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Height="100">
+    Height="100"
+    x:Name="parkElement">
     
     <Grid Background="Transparent">
         <Grid.ColumnDefinitions>
@@ -15,12 +16,12 @@
         </Grid.ColumnDefinitions>
         <Image Name="SlikaParkinga" Source="ms-appx:///Assets/Square44x44Logo.scale-200.png" Stretch="Uniform"/>
         <RelativePanel Grid.Column="1">
-            <TextBlock Name="adresaTextBlock" Text="Adresa" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignTopWithPanel="True" Margin="5,5,0,0"/>
-            <HyperlinkButton Name="brTelefonaHyperlinkButton" Content="___/___-___" RelativePanel.Below="adresaTextBlock" Margin="5,-5,0,0" FontSize="10"/>
-            <local:RatingElement x:Name="Rating" Width="100" Height="15" RateValue="0.5" RelativePanel.Below="brTelefonaHyperlinkButton" Margin="5,5,0,0"/>
-            <TextBlock Name="ratingTextBlock" Text="(0)" RelativePanel.Below="brTelefonaHyperlinkButton" RelativePanel.RightOf="Rating" Margin="5,5,0,0" FontSize="10" Foreground="Gray"/>
-            <TextBlock Name="cijenaTextBlock" Text="0 KM" RelativePanel.Below="Rating" Margin="5,10,0,0" FontSize="12"/>
-            <TextBlock Name="kapacitetTextBlock" Text="(-/-)" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" FontSize="10" Foreground="Gray" Margin="0,5,5,0"/>
+            <TextBlock Name="adresaTextBlock" Text="{Binding Path=AdresaTextBlock, ElementName=parkElement}" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignTopWithPanel="True" Margin="5,5,0,0"/>
+            <HyperlinkButton Name="brTelefonaHyperlinkButton" Content="{Binding Path=BrTelefonaHyperlingButton, ElementName=parkElement}" RelativePanel.Below="adresaTextBlock" Margin="5,-5,0,0" FontSize="10"/>
+            <local:RatingElement x:Name="Rating" Width="100" Height="15" RateValue="{Binding Path=RatingP, ElementName=parkElement}" RelativePanel.Below="brTelefonaHyperlinkButton" Margin="5,5,0,0"/>
+            <TextBlock Name="ratingTextBlock" Text="{Binding Path=RatingTextBlock, ElementName=parkElement}" RelativePanel.Below="brTelefonaHyperlinkButton" RelativePanel.RightOf="Rating" Margin="5,5,0,0" FontSize="10" Foreground="Gray"/>
+            <TextBlock Name="cijenaTextBlock" Text="{Binding Path=CijenaTextBlock, ElementName=parkElement}" RelativePanel.Below="Rating" Margin="5,10,0,0" FontSize="12"/>
+            <TextBlock Name="kapacitetTextBlock" Text="{Binding Path=KapacitetTextBlock, ElementName=parkElement}" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" FontSize="10" Foreground="Gray" Margin="0,5,5,0"/>
         </RelativePanel>
     </Grid>
 </UserControl>
