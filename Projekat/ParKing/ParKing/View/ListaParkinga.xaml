@@ -13,34 +13,25 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <RelativePanel Grid.Row="0" Background="#147ad4">
-            <Button Name="backButton" FontFamily="Segoe MDL2 Assets" Content="&#xE112;" RelativePanel.AlignLeftWithPanel="True"/>
-            <TextBlock Style="{StaticResource TextBlockNaslovStyle}" Name="naslovTextBlock" Text="Lista parlinga" RelativePanel.RightOf="backButton"/>
+            <Button Command="{Binding Path=Back}" Name="backButton" Style="{StaticResource BackButtonStyle}" RelativePanel.AlignLeftWithPanel="True"/>
+            <TextBlock Style="{StaticResource TextBlockNaslovStyle}" Name="naslovTextBlock" Text="Lista parkinga" RelativePanel.RightOf="backButton"/>
             <SearchBox Name="searchBox" PlaceholderText="Trazi" RelativePanel.AlignRightWithPanel="True" Width="150"/>
             <TextBlock Name="govno" RelativePanel.RightOf="naslovTextBlock" RelativePanel.AlignLeftWith="searchBox" MinWidth="5"/>
         </RelativePanel>
         <RelativePanel Grid.Row="1">
-            <ListBox>
-                <ListBoxItem HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top">
-                    <local:ListaParkingElement/>
-                </ListBoxItem>
-                <ListBoxItem HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top">
-                    <local:ListaParkingElement/>
-                </ListBoxItem>
-                <ListBoxItem HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top">
-                    <local:ListaParkingElement/>
-                </ListBoxItem>
-                <ListBoxItem HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top">
-                    <local:ListaParkingElement/>
-                </ListBoxItem>
-                <ListBoxItem HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top">
-                    <local:ListaParkingElement/>
-                </ListBoxItem>
-                <ListBoxItem HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top">
-                    <local:ListaParkingElement/>
-                </ListBoxItem>
-                <ListBoxItem HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top">
-                    <local:ListaParkingElement/>
-                </ListBoxItem>
+            <ListBox x:Name="ListaParkingaListBox" ItemsSource="{Binding Parkinzi}" SelectionChanged="ListaParkingaListBox_SelectionChanged">
+                <ListBox.ItemContainerStyle>
+                    <Style TargetType="ListBoxItem">
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+                        <Setter Property="VerticalContentAlignment" Value="Stretch"></Setter>
+                        <Setter Property="Background" Value="White"></Setter>
+                    </Style>
+                </ListBox.ItemContainerStyle>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <local:ListaParkingElement />
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
             </ListBox>
         </RelativePanel>
     </Grid>

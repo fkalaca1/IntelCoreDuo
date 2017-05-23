@@ -1,4 +1,7 @@
-﻿using System;
+﻿using ParKing.Helper;
+using ParKing.Model;
+using ParKing.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,9 +25,19 @@ namespace ParKing.View
     /// </summary>
     public sealed partial class ListaParkinga : Page
     {
+        INavigationService NavigationService { get; set; }
         public ListaParkinga()
         {
             this.InitializeComponent();
+            this.DataContext = new ListaParkingaViewModel();
+            NavigationService = new NavigationService();
+        }
+
+        private void ListaParkingaListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var parking = (Parking)ListaParkingaListBox.SelectedItem;
+
+            NavigationService.Navigate(typeof(View.DetaljiParkinga), parking);
         }
     }
 }

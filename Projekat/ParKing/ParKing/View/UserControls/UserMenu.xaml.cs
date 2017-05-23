@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ParKing.Helper;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -19,9 +20,36 @@ namespace ParKing.View.UserControls
 {
     public sealed partial class UserMenu : UserControl
     {
+        INavigationService NavigationService { get; set; }
         public UserMenu()
         {
             this.InitializeComponent();
+            NavigationService = new NavigationService();
+
+        }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(ProfilListBoxItem.IsSelected)
+            {
+                NavigationService.Navigate(typeof(View.Profil));
+            }
+            else if(PocetnaListBoxItem.IsSelected)
+            {
+                NavigationService.Navigate(typeof(View.Pocetna));
+            }
+            else if(ListaParkingaListBoxItem.IsSelected)
+            {
+                NavigationService.Navigate(typeof(View.ListaParkinga));
+            }
+            else if(RegistrujParkingListBoxItem.IsSelected)
+            {
+                NavigationService.Navigate(typeof(View.RegistracijaParkinga));
+            }
+            else if(RezervacijeListBoxItem.IsSelected)
+            {
+                NavigationService.Navigate(typeof(View.MojeRezervacije));
+            }
         }
     }
 }

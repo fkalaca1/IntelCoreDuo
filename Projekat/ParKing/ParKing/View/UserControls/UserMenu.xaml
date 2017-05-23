@@ -8,18 +8,18 @@
     mc:Ignorable="d">
 
     <StackPanel>
-        <ListBox SelectionMode="Single">
-            <ListBoxItem x:Name="PocetnaListBoxItem">
+        <ListBox SelectionMode="Single" SelectionChanged="ListBox_SelectionChanged">
+            <ListBoxItem x:Name="PocetnaListBoxItem" HorizontalAlignment="Stretch">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xEA8A;" FontSize="24" Foreground="#147ad4" />
                     <TextBlock Style="{StaticResource SplitViewTextBlock}">Pocetna</TextBlock>
                 </StackPanel>
             </ListBoxItem>
-            <ListBoxItem x:Name="ProfilListBoxItem" >
+            <ListBoxItem x:Name="ProfilListBoxItem"  HorizontalAlignment="Stretch">
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xEA8C;" FontSize="24" Foreground="#147ad4"/>
-                    <TextBlock Style="{StaticResource SplitViewTextBlock}">Profil</TextBlock>
-                </StackPanel>
+                     <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xEA8C;" FontSize="24" Foreground="#147ad4"/>
+                     <TextBlock Style="{StaticResource SplitViewTextBlock}">Profil</TextBlock>
+                 </StackPanel>
             </ListBoxItem>
             <ListBoxItem x:Name="PopularnoListBoxItem">
                 <StackPanel Orientation="Horizontal">

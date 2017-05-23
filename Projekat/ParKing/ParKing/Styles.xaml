@@ -95,4 +95,11 @@
 
     </Style>
 
+    <Style TargetType="Button" x:Name="BackButtonStyle">
+        <Setter Property="Background" Value="#147ad4" />
+        <Setter Property="FontFamily" Value="Segoe MDL2 Assets" />
+        <Setter Property="Content" Value="&#xE0A6;" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="FontSize" Value="25" />
+    </Style>
 </ResourceDictionary>

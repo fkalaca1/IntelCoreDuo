@@ -17,16 +17,13 @@
                 <ColumnDefinition Width="60"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="80"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="200"/>
                 <RowDefinition Height="60"/>
             </Grid.RowDefinitions>
 
-            
-            
-            
             <StackPanel Grid.Row="1" Grid.ColumnSpan="3" Background="Green">
                 <lr:DateTimeControl/>
             </StackPanel>
@@ -122,23 +119,23 @@
             HorizontalAlignment="Stretch"
             VerticalAlignment="Stretch"
             Style="{StaticResource ButtonStyle}"/>
-            
-            <Button x:Name="BackButton"
-            Content="&#xE0A6;"
+
+            <StackPanel Orientation="Horizontal" Grid.ColumnSpan="3">
+
+                <Button x:Name="BackButton"
             VerticalAlignment="Top"
-            FontFamily="Segoe MDL2 Assets"
-            Foreground="White"
-            FontSize="25"
-            Grid.Row="0"
-            Grid.Column="0"
+            Style="{StaticResource BackButtonStyle}"
+            Command="{Binding Path=Back}"
             />
 
-            <TextBlock Grid.Row="0" Grid.Column="1"
-            VerticalAlignment="Center"
-            HorizontalAlignment="Center"
+                <TextBlock
+                    VerticalAlignment="Center"
             x:Name="textBlockImeParkinga"  
             Text="Parking1" 
             Style="{StaticResource TekstStranice3}"/>
+
+            </StackPanel>
+           
 
         </Grid>
     </ScrollViewer>
