@@ -32,12 +32,5 @@ namespace ParKing.View
             this.DataContext = new ListaParkingaViewModel();
             NavigationService = new NavigationService();
         }
-
-        private void ListaParkingaListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            var parking = (Parking)ListaParkingaListBox.SelectedItem;
-
-            NavigationService.Navigate(typeof(View.DetaljiParkinga), parking);
-        }
     }
 }

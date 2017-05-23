@@ -19,8 +19,8 @@
             Style="{StaticResource BackButtonStyle}"
             Command="{Binding Path=Back}"
             />
-            
-            <TextBlock Style="{StaticResource TextBlockNaslovStyle}" Name="naslovTextBlock" Text="Moje rezervacije" RelativePanel.RightOf="BackButton"/>
+
+            <TextBlock Style="{StaticResource TekstStranice3}" RelativePanel.AlignVerticalCenterWith="BackButton" Name="naslovTextBlock" Text="Moje rezervacije" RelativePanel.RightOf="BackButton"/>
          </RelativePanel>
         <RelativePanel Grid.Row="1">
             <ListBox ItemsSource="{Binding Rezervacije}">

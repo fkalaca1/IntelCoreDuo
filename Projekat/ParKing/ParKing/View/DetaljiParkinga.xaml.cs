@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ParKing.Model;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -28,6 +29,11 @@ namespace ParKing.View
             this.DataContext = new ViewModel.ParkingViewModel();
         }
 
-        
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            var parking = (Parking)e.Parameter;
+
+            ((ViewModel.ParkingViewModel)this.DataContext).parking = parking;
+        }
     }
 }

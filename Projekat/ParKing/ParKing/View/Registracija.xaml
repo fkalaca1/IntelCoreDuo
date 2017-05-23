@@ -21,9 +21,12 @@
                 <ColumnDefinition Width="1*" />
             </Grid.ColumnDefinitions>
 
+            <RelativePanel Grid.Column="3">
+                <Button Command="{Binding Back}" RelativePanel.AlignRightWithPanel="True" Margin="10" FontFamily="Segoe MDL2 Assets" Content="&#xE106;" Foreground="#FF004DBB" Background="Transparent" FontSize="20" BorderThickness="0"/>
+            </RelativePanel>
             <StackPanel Grid.ColumnSpan="3">
                 <Image Name="logo" Height="150" Width="300" Source="ms-appx:///Assets/parkingLogo.png"
-                   Margin="0,50,0,15" Stretch="Uniform"/>
+                   Margin="0,30,0,15" Stretch="Uniform"/>
             </StackPanel>
 
             <RelativePanel Grid.Row="1" Grid.Column="1">

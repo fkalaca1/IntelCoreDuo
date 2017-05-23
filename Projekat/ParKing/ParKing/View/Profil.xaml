@@ -21,7 +21,7 @@
             Style="{StaticResource BackButtonStyle}"
             Command="{Binding Path=Back}"
             />
-            <TextBlock Style="{StaticResource TextBlockNaslovStyle}" Name="naslovTextBlock" Text="Moj profil" RelativePanel.RightOf="BackButton"/>
+            <TextBlock Style="{StaticResource TekstStranice3}" Name="naslovTextBlock" RelativePanel.AlignVerticalCenterWith="BackButton" Text="Moj profil" RelativePanel.RightOf="BackButton"/>
         </RelativePanel>
         <my:UserElement Grid.Row="1"  MailTextBlock="{Binding User.Email}"/>
         <Grid Grid.Row="2">

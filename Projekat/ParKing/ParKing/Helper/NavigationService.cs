@@ -25,7 +25,8 @@ namespace ParKing.Helper
         public void GoBack()
         {
             var frame = (Frame)Window.Current.Content;
-            frame.GoBack();
+            if(frame.CanGoBack)
+                frame.GoBack();
         }
     }
 }

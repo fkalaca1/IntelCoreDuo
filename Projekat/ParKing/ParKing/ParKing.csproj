@@ -114,6 +114,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\ListaParkingaViewModel.cs" />
     <Compile Include="ViewModel\ParkingViewModel.cs" />
+    <Compile Include="ViewModel\RegistracijaViewModel.cs" />
     <Compile Include="ViewModel\RezervacijaViewModel.cs" />
     <Compile Include="ViewModel\UserViewModel.cs" />
     <Compile Include="View\DetaljiParkinga.xaml.cs">

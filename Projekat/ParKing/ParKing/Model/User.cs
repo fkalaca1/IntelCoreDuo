@@ -15,6 +15,9 @@ namespace ParKing.Model
         private String sifra;
         private List<Rezervacija> mojeRezervacije;
 
+        public User()
+        { }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         public User(String email, String brojTelefona, String sifra, List<Rezervacija> mojeRezervacije)

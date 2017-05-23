@@ -73,6 +73,7 @@ namespace ParKing.Model
             get
             {
                 double povratna = 0;
+                if (ocjene.Count == 0) return 0;
                 for (int i = 0; i < ocjene.Count; i++)
                 {
                     povratna += ocjene[i].OcjenaP;

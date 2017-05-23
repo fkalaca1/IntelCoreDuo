@@ -14,12 +14,12 @@
         </Grid.RowDefinitions>
         <RelativePanel Grid.Row="0" Background="#147ad4">
             <Button Command="{Binding Path=Back}" Name="backButton" Style="{StaticResource BackButtonStyle}" RelativePanel.AlignLeftWithPanel="True"/>
-            <TextBlock Style="{StaticResource TextBlockNaslovStyle}" Name="naslovTextBlock" Text="Lista parkinga" RelativePanel.RightOf="backButton"/>
+            <TextBlock Style="{StaticResource TekstStranice3}" Name="naslovTextBlock" RelativePanel.AlignVerticalCenterWith="backButton" Text="Lista parkinga" RelativePanel.RightOf="backButton"/>
             <SearchBox Name="searchBox" PlaceholderText="Trazi" RelativePanel.AlignRightWithPanel="True" Width="150"/>
             <TextBlock Name="govno" RelativePanel.RightOf="naslovTextBlock" RelativePanel.AlignLeftWith="searchBox" MinWidth="5"/>
         </RelativePanel>
         <RelativePanel Grid.Row="1">
-            <ListBox x:Name="ListaParkingaListBox" ItemsSource="{Binding Parkinzi}" SelectionChanged="ListaParkingaListBox_SelectionChanged">
+            <ListBox x:Name="ListaParkingaListBox" ItemsSource="{Binding Parkinzi}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
                 <ListBox.ItemContainerStyle>
                     <Style TargetType="ListBoxItem">
                         <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
@@ -29,7 +29,7 @@
                 </ListBox.ItemContainerStyle>
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <local:ListaParkingElement />
+                        <local:ListaParkingElement AdresaTextBlock="{Binding Adresa}" BrTelefonaHyperlingButton="{Binding BrojTelefona}" RatingP="{Binding Prosjek}" RatingTextBlock="{Binding BrOcjena}" CijenaTextBlock="{Binding DajCijenu}" KapacitetTextBlock="{Binding Kapacitet}" />
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
