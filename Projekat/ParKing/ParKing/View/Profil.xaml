@@ -12,18 +12,27 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <my:UserElement MailTextBlock="{Binding User.Email}"/>
-        <Grid Grid.Row="1">
+        <RelativePanel Grid.Row="0" Background="#147ad4">
+            <Button x:Name="BackButton"
+            VerticalAlignment="Top"
+            Style="{StaticResource BackButtonStyle}"
+            Command="{Binding Path=Back}"
+            />
+            <TextBlock Style="{StaticResource TextBlockNaslovStyle}" Name="naslovTextBlock" Text="Moj profil" RelativePanel.RightOf="BackButton"/>
+        </RelativePanel>
+        <my:UserElement Grid.Row="1"  MailTextBlock="{Binding User.Email}"/>
+        <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
-            <Button Click="profilButton_Click" Grid.Column="0" Name="profilButton" Content="Profil" HorizontalAlignment="Stretch" Background="Blue" Foreground="White" FontWeight="Bold"/>
-            <Button Click="parkinziButton_Click" Grid.Column="1" Name="parkinziButton" Content="Parkinzi" HorizontalAlignment="Stretch" Background="Blue" Foreground="White" FontWeight="Bold"/>
+            <Button Click="profilButton_Click" Grid.Column="0" Name="profilButton" Content="Profil" HorizontalAlignment="Stretch" Background="#147ad4" Foreground="White" FontWeight="Bold"/>
+            <Button Click="parkinziButton_Click" Grid.Column="1" Name="parkinziButton" Content="Parkinzi" HorizontalAlignment="Stretch" Background="#147ad4" Foreground="White" FontWeight="Bold"/>
         </Grid>
-        <my:ProfilElement x:Name="profilKontrola" Grid.Row="2" Visibility="Visible"/>
-        <my:Parkinzi x:Name="profilParkinzi" Grid.Row="2" Visibility="Collapsed"/>
+        <my:ProfilElement x:Name="profilKontrola" Grid.Row="3" Visibility="Visible"/>
+        <my:Parkinzi x:Name="profilParkinzi" Grid.Row="3" Visibility="Collapsed"/>
     </Grid>
 </Page>

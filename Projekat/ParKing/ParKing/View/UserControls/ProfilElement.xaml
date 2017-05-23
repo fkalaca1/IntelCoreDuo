@@ -8,7 +8,7 @@
     mc:Ignorable="d">
     <ScrollViewer VerticalScrollBarVisibility="Auto">
         <StackPanel>
-            <local:EditElement PropertyTextBlock="&#xE119;" PropertyTextBox="{Binding User.Email}"/>
+            <local:EditElement PropertyTextBlock="&#xE119;" PropertyTextBox="{Binding User.Email, Mode=TwoWay}"/>
             <local:EditElement PropertyTextBlock="&#xE13A;" PropertyTextBox="{Binding User.BrojTelefona}"/>
             <local:EditElement PropertyTextBlock="&#xE8D7;" PropertyTextBox="Lozinka"/>
             <local:EditElement PropertyTextBlock="&#xE90E;" PropertyTextBox="Metode placanja"/>

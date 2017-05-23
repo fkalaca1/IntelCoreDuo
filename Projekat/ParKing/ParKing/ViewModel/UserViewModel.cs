@@ -1,16 +1,20 @@
-﻿using ParKing.Model;
+﻿using ParKing.Helper;
+using ParKing.Model;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace ParKing.ViewModel
 {
     class UserViewModel
     {
         public User User { get; set; }
+        public ICommand Back { get; set; }
+        INavigationService NavigationService { get; set; }
         public UserViewModel()
         {
             List<Parking> parkinzi = new List<Parking>();
@@ -32,6 +36,12 @@ namespace ParKing.ViewModel
             if (parkinzi.Count != 0) tempU = new VlasnikParkinga("riktash38@gmail.com", "062/157-463", "huehuehue", parkinzi, rezervacije);
             else tempU = new User("riktash38@gmail.com", "062/157-463", "huehuehue", rezervacije);
             User = tempU;
+            NavigationService = new NavigationService();
+            Back = new RelayCommand<object>(GoBack);
+        }
+        public void GoBack(object parameter)
+        {
+            NavigationService.GoBack();
         }
     }
 }

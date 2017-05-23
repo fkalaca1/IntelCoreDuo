@@ -11,6 +11,6 @@
 
     <RelativePanel>
         <Image Name="profilnaImage" RelativePanel.AlignHorizontalCenterWithPanel="True" Source="ms-appx:///Assets/Square44x44Logo.scale-200.png" Stretch="Fill" Margin="0,25,0,0" Width="120" Height="120"/>
-        <TextBlock Name="mailTextBlock" Text="{Binding Path=MailTextBlock, ElementName=profilnaIMail}" RelativePanel.Below="profilnaImage" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="0,20,0,0"/>
+        <TextBlock Name="mailTextBlock" Text="{Binding Path=MailTextBlock, ElementName=profilnaIMail, Mode=TwoWay}" RelativePanel.Below="profilnaImage" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="0,20,0,0"/>
     </RelativePanel>
 </UserControl>
