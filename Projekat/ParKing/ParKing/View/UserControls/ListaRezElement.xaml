@@ -6,18 +6,19 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Height="100">
+    Height="100"
+    x:Name="rezElement">
 
-    <Grid Background="White">
+    <Grid Background="Transparent" DataContext="{Binding ElementName=rezElement}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
         <Image Name="SlikaParkinga" Source="ms-appx:///Assets/Square44x44Logo.scale-200.png" Stretch="Uniform"/>
         <StackPanel Grid.Column="1">
-            <TextBlock Name="ParkingTextBlock" Text="Parking SCC" Margin="5,5,0,0"/>
-            <TextBlock Name="cijenaTextBlock" Text="Cijena 10KM" Margin="5,10,0,0" FontSize="12"/>
-            <TextBlock Name="PeriodRezervacijeTextBlock" Text="Rezervisano od (14.5.2017 15h) do (14.5.2017 20h)" Margin="5,10,0,0" FontSize="12"/>
+            <TextBlock Name="parkingTextBlock" Text="{Binding Path=ParkingTextBlock}" Margin="5,5,0,0"/>
+            <TextBlock Name="cijenaTextBlock" Text="{Binding Path=CijenaTextBlock}" Margin="5,10,0,0" FontSize="12"/>
+            <TextBlock Name="periodRezervacijeTextBlock" Text="{Binding Path=PeriodRezervacijeTextBlock}" Margin="5,10,0,0" FontSize="12"/>
         </StackPanel>
     </Grid>
 </UserControl>

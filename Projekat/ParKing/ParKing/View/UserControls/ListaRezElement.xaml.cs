@@ -23,5 +23,13 @@ namespace ParKing.View.UserControls
         {
             this.InitializeComponent();
         }
+        public String ParkingTextBlock { get { return (String)GetValue(ParkingTextBlockProperty); }set { SetValue(ParkingTextBlockProperty, value); } }
+        public static readonly DependencyProperty ParkingTextBlockProperty = DependencyProperty.Register("ParkingTextBlock", typeof(string), typeof(ListaRezElement), new PropertyMetadata(""));
+        public String CijenaTextBlock { get { return (String)GetValue(CijenaTextBlockProperty); } set { SetValue(CijenaTextBlockProperty, value); } }
+        public static readonly DependencyProperty CijenaTextBlockProperty = DependencyProperty.Register("CijenaTextBlock", typeof(string), typeof(ListaRezElement), new PropertyMetadata(""));
+        public String PeriodRezervacijeTextBlock { get { return (String)GetValue(PeriodRezervacijeTextBlockProperty); } set { SetValue(PeriodRezervacijeTextBlockProperty, value); } }
+        public static readonly DependencyProperty PeriodRezervacijeTextBlockProperty = DependencyProperty.Register("PeriodRezervacijeTextBlock", typeof(string), typeof(ListaRezElement), new PropertyMetadata(""));
+
+        
     }
 }

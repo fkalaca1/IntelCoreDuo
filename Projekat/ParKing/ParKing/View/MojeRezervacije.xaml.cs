@@ -23,10 +23,12 @@ namespace ParKing.View
     /// </summary>
     public sealed partial class MojeRezervacije : Page
     {
+        INavigationService NavigationService { get; set; }
         public MojeRezervacije()
         {
             this.InitializeComponent();
             this.DataContext = new ViewModel.RezervacijaViewModel();
+            NavigationService = new NavigationService();
         }
     }
 }

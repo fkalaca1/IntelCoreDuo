@@ -16,6 +16,16 @@ namespace ParKing.Model
         private String cijena;
         //private Parking rezervisaniParking;
 
+        public String ImeTmp
+        {
+            get { return "Scc Parking"; }
+        }
+
+        public String PocKrajRez
+        {
+           get { return pocetakRezervacije + "/" + krajRezervacije; }
+        }
+
         public DateTime PocetakRezervacije
         {
             get
@@ -42,7 +52,7 @@ namespace ParKing.Model
         {
             get
             {
-                return cijena;
+                return cijena+" KM";
             }
             set
             {

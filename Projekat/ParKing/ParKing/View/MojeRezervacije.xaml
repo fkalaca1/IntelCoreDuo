@@ -23,7 +23,7 @@
             <TextBlock Style="{StaticResource TekstStranice3}" RelativePanel.AlignVerticalCenterWith="BackButton" Name="naslovTextBlock" Text="Moje rezervacije" RelativePanel.RightOf="BackButton"/>
          </RelativePanel>
         <RelativePanel Grid.Row="1">
-            <ListBox ItemsSource="{Binding Rezervacije}">
+            <ListBox x:Name="ListaRezervacijaListBox" ItemsSource="{Binding Rezervacije}">
                 <!--<ListBoxItem HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top">
                     <lr:ListaRezElement/>
                 </ListBoxItem>-->
@@ -36,23 +36,7 @@
                 </ListBox.ItemContainerStyle>
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <Grid Background="Transparent">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="auto"/>
-                                <ColumnDefinition Width="2*"/>
-                            </Grid.ColumnDefinitions>
-                            <Image Name="SlikaParkinga" Source="ms-appx:///Assets/Square44x44Logo.scale-200.png" Stretch="Uniform"/>
-                            <RelativePanel Grid.Column="1">
-                                <TextBlock Name="ParkingTextBlock" Text="Parking SCC" Margin="5,5,0,0"/>
-                                <TextBlock Name="placeno" Text="Placeno: " RelativePanel.Below="ParkingTextBlock" Margin="5,10,0,0" FontSize="12" />
-                                <TextBlock Name="cijenaTextBlock" Text="{Binding Cijena}" RelativePanel.Below="ParkingTextBlock" RelativePanel.RightOf="placeno" Margin="5,10,0,0" FontSize="12"/>
-                                <TextBlock Text=" KM" RelativePanel.Below="ParkingTextBlock" RelativePanel.RightOf="cijenaTextBlock" Margin="5,10,0,0" FontSize="12"/>
-                                <TextBlock Name="rezOd" Text="Rezervisano od " RelativePanel.Below="cijenaTextBlock" Margin="5,10,0,0" FontSize="12"/>
-                                <TextBlock Name="rezervisanoOd" Text="{Binding PocetakRezervacije}" RelativePanel.Below="cijenaTextBlock" RelativePanel.RightOf="rezOd" Margin="5,10,0,0" FontSize="12" />
-                                <TextBlock Name="rezDo" Text=" do " RelativePanel.Below="cijenaTextBlock" RelativePanel.RightOf="rezervisanoOd" Margin="5,10,0,0" FontSize="12"/>
-                                <TextBlock Text="{Binding KrajRezervacije}" RelativePanel.Below="cijenaTextBlock" RelativePanel.RightOf="rezDo" Margin="5,10,0,0" FontSize="12" />
-                            </RelativePanel>
-                        </Grid>
+                        <lr:ListaRezElement ParkingTextBlock="{Binding ImeTmp}" CijenaTextBlock="{Binding Cijena}" PeriodRezervacijeTextBlock="{Binding PocKrajRez}" />
                     </DataTemplate>
                 </ListBox.ItemTemplate>
                 

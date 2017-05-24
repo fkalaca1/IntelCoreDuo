@@ -105,11 +105,19 @@
 
         </StackPanel>
 
-        <TextBlock 
+        <StackPanel Orientation="Horizontal" Grid.ColumnSpan="3">
+            <Button x:Name="BackButton"
+            VerticalAlignment="Top"
+            Style="{StaticResource BackButtonStyle}"
+            Command="{Binding Path=Back}"
+            />
+            <TextBlock 
             x:Name="NaslovRegistracijaParkingatextBlock"  Grid.Row="0"
             Grid.ColumnSpan="3"
             Text="Popunite formu i dodajte parking" 
             Style="{StaticResource TekstStranice}" />
+        </StackPanel>
+        
 
 
 
