@@ -25,6 +25,7 @@ namespace ParKing.View
         public RegistracijaParkinga()
         {
             this.InitializeComponent();
+            DataContext = new ViewModel.RegistracijaParkingaViewModel();
         }
     }
 }
