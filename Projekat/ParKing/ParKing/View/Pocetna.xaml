@@ -28,6 +28,7 @@
                    Background="White">
             <SplitView.Pane>
                 <my:UserMenu />
+                
             </SplitView.Pane>
             <SplitView.Content>
                 <Maps:MapControl 

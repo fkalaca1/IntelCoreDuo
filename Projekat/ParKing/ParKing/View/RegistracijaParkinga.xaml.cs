@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ParKing.Helper;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,9 +23,13 @@ namespace ParKing.View
     /// </summary>
     public sealed partial class RegistracijaParkinga : Page
     {
+        INavigationService NavigationService { get; set; }
+
         public RegistracijaParkinga()
         {
             this.InitializeComponent();
+            DataContext = new ViewModel.RegistracijaViewModel();
+            NavigationService = new NavigationService();
         }
     }
 }

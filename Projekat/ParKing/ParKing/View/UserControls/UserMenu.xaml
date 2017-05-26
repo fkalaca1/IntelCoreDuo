@@ -15,8 +15,8 @@
                     <TextBlock Style="{StaticResource SplitViewTextBlock}">Pocetna</TextBlock>
                 </StackPanel>
             </ListBoxItem>
-            <ListBoxItem x:Name="ProfilListBoxItem"  HorizontalAlignment="Stretch">
-                <StackPanel Orientation="Horizontal">
+            <ListBoxItem x:Name="ProfilListBoxItem"  HorizontalAlignment="Stretch" >
+                <StackPanel Orientation="Horizontal" >
                      <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xEA8C;" FontSize="24" Foreground="#147ad4"/>
                      <TextBlock Style="{StaticResource SplitViewTextBlock}">Profil</TextBlock>
                  </StackPanel>

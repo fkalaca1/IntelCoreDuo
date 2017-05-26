@@ -6,8 +6,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
-    <Grid Background="#147ad4">
+    <ScrollViewer  VerticalScrollBarVisibility="Auto">
+        <Grid Background="#147ad4">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="2*"/>
@@ -19,7 +19,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-
+        
         <StackPanel x:Name="stekpanel" Grid.Row="1" Grid.Column="1">
             <TextBox 
             x:Name="AdresatextBox" 
@@ -104,6 +104,7 @@
 
 
         </StackPanel>
+        
 
         <StackPanel Orientation="Horizontal" Grid.ColumnSpan="3">
             <Button x:Name="BackButton"
@@ -117,13 +118,14 @@
             Text="Popunite formu i dodajte parking" 
             Style="{StaticResource TekstStranice}" />
         </StackPanel>
+
+
+
         
 
 
 
 
-
-
-
     </Grid>
+    </ScrollViewer>
 </Page>
