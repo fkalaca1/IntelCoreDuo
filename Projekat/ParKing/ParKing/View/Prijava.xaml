@@ -23,9 +23,9 @@
             <StackPanel>
                 <TextBox Style="{StaticResource TextBoxStyle}" PlaceholderText="Username" Name="usernameTexBox"/>
                 <PasswordBox Style="{StaticResource PasswordBoxStyle}" PlaceholderText="Password" Name="passwordTexBox"/>
-                <Button Style="{StaticResource ButtonStyle}" Content="Prijavi se" Background="Green" Name="loginButton" HorizontalAlignment="Stretch"/>
+                <Button Click="loginButton_Click" Style="{StaticResource ButtonStyle}" Content="Prijavi se" Background="Green" Name="loginButton" HorizontalAlignment="Stretch"/>
                 <HyperlinkButton Content="Zaboravili ste lozinku?" Name="passwordButton" Margin="0,0,0,0" Foreground="AliceBlue"/>
-                <Button Style="{StaticResource ButtonStyle}" Content="Prijavi se sa Google+" Name="googleButton" Background="Red" HorizontalAlignment="Stretch"/>
+                <Button  Style="{StaticResource ButtonStyle}" Content="Prijavi se sa Google+" Name="googleButton" Background="Red" HorizontalAlignment="Stretch"/>
             </StackPanel>
         </ScrollViewer>
         <Grid Grid.ColumnSpan="3" Grid.Row="2">
