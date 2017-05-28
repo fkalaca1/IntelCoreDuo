@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -16,6 +17,9 @@ namespace ParKing.Model
         private String brojTelefona;
         private String sifra;
         private List<Rezervacija> mojeRezervacije;
+
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int UserId { get; set; }
 
         public User()
         { }
@@ -34,7 +38,7 @@ namespace ParKing.Model
         public String Email { get { return email; } set { Set(ref email, value); } }
         public String BrojTelefona { get { return brojTelefona; } set { Set(ref brojTelefona, value); } }
         public String Sifra { get { return sifra; } set { Set(ref sifra, value); } }
-        public List<Rezervacija> MojeRezervacije { get { return mojeRezervacije; } set { mojeRezervacije = value; } }
+        public virtual List<Rezervacija> MojeRezervacije { get { return mojeRezervacije; } set { mojeRezervacije = value; } }
         public String ImePrezime { get { return ime + " " + prezime; } }
 
         protected virtual void OnPropertyChanged(String propertyName)

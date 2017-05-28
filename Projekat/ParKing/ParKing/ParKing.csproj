@@ -101,10 +101,16 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20170528142927_initialMigration.cs" />
+    <Compile Include="Migrations\20170528142927_initialMigration.designer.cs">
+      <DependentUpon>20170528142927_initialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\ParkingDBContextModelSnapshot.cs" />
     <Compile Include="Model\Administrator.cs" />
     <Compile Include="Model\Izvjestaj.cs" />
     <Compile Include="Model\Ocjena.cs" />
     <Compile Include="Model\Gost.cs" />
+    <Compile Include="Model\ParkingDBContext.cs" />
     <Compile Include="Model\RadnikNaParkingu.cs" />
     <Compile Include="Model\Rezervacija.cs" />
     <Compile Include="Model\Parking.cs" />

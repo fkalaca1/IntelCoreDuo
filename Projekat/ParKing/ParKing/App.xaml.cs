@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Data.Entity;
+using ParKing.Model;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -30,8 +32,11 @@ namespace ParKing
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-            
 
+            using (var db = new ParkingDBContext())
+            {
+                db.Database.ApplyMigrations();
+            }
 
         }
 

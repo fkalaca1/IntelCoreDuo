@@ -14,8 +14,38 @@ namespace ParKing.Model
         private DateTime pocetakRezervacije;
         private DateTime krajRezervacije;
         private String cijena;
-        //private Parking rezervisaniParking;
+        private User korisnik;
+        private ParkingRezervacija rezervisaniParking;
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int RezervacijaId { get; set; }
 
+        public int UserId { get; set; }
+        [ForeignKey("UserId")]
+        public virtual User Korisnik
+        {
+            get
+            {
+                return korisnik;
+            }
+            set
+            {
+                korisnik = value;
+            }
+        }
+
+        public int ParkingRezervacijaId { get; set; }
+        [ForeignKey("ParkingRezervacijaId")]
+        public virtual ParkingRezervacija RezervisaniParking
+        {
+            get
+            {
+                return rezervisaniParking;
+            }
+            set
+            {
+                rezervisaniParking = value;
+            }
+        }
         public String ImeTmp
         {
             get { return "Scc Parking"; }

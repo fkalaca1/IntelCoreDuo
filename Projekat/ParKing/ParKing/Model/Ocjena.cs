@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -10,6 +11,8 @@ namespace ParKing.Model
 {
     public class Ocjena
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int OcjenaId { get; set; }
         private int ocjenaP;
         private String komentar;
         private Parking maticni;
@@ -25,10 +28,14 @@ namespace ParKing.Model
             this.ocjenitelj = ocjenitelj;
         }
 
+        public int ParkingId { get; set; }
+        public int UserId { get; set; }
         public int OcjenaP { get { return ocjenaP; } set { Set(ref ocjenaP, value); } }
         public String Komentar { get { return komentar; } set { Set(ref komentar, value); } }
-        public Parking Maticni { get { return maticni; } set { Set(ref maticni, value); } }
-        public User Ocjenitelj { get { return ocjenitelj; } set { Set(ref ocjenitelj, value); } }
+        [ForeignKey("ParkingId")]
+        public virtual Parking Maticni { get { return maticni; } set { Set(ref maticni, value); } }
+        [ForeignKey("UserId")]
+        public virtual User Ocjenitelj { get { return ocjenitelj; } set { Set(ref ocjenitelj, value); } }
 
         protected virtual void OnPropertyChanged(String propertyName)
         {

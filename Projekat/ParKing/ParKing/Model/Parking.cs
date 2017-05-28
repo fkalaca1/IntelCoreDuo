@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -11,11 +12,14 @@ namespace ParKing.Model
 {
     public class Parking : INotifyPropertyChanged
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int ParkingId { get; set; }
+
         private String adresa;
         private int kapacitet;
         private double cijena;
         private List<Ocjena> ocjene;
-
+       
         public Parking()
         {
 
@@ -59,7 +63,7 @@ namespace ParKing.Model
 
         public String DajCijenu { get { return Cijena.ToString() + " KM"; } }
 
-        public List<Ocjena> Ocjene
+        public virtual List<Ocjena> Ocjene
         {
             get { return ocjene; }
             set
