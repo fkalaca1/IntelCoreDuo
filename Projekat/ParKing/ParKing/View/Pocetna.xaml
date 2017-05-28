@@ -27,7 +27,7 @@
                    OpenPaneLength="200"
                    Background="White">
             <SplitView.Pane>
-                <my:UserMenu />
+                <my:UserMenu x:Name="userMenu"/>
                 
             </SplitView.Pane>
             <SplitView.Content>

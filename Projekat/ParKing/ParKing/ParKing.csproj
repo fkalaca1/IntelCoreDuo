@@ -124,11 +124,17 @@
     <Compile Include="View\ListaParkinga.xaml.cs">
       <DependentUpon>ListaParkinga.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\ListaZaOdobrenje.xaml.cs">
+      <DependentUpon>ListaZaOdobrenje.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Profil.xaml.cs">
       <DependentUpon>Profil.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\MojeRezervacije.xaml.cs">
       <DependentUpon>MojeRezervacije.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\AdminMenu.xaml.cs">
+      <DependentUpon>AdminMenu.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\UserControls\EditElement.xaml.cs">
       <DependentUpon>EditElement.xaml</DependentUpon>
@@ -138,6 +144,9 @@
     </Compile>
     <Compile Include="View\Pocetna.xaml.cs">
       <DependentUpon>Pocetna.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\OdobriParkingElement.xaml.cs">
+      <DependentUpon>OdobriParkingElement.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\UserControls\ParkingPopup.xaml.cs">
       <DependentUpon>ParkingPopup.xaml</DependentUpon>
@@ -204,6 +213,10 @@
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Page>
+    <Page Include="View\ListaZaOdobrenje.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\MojeRezervacije.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -224,11 +237,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\UserControls\AdminMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\UserControls\ListaRezElement.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\UserControls\EditElement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserControls\OdobriParkingElement.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

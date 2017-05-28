@@ -10,6 +10,8 @@ namespace ParKing.Model
 {
     public class User : INotifyPropertyChanged
     {
+        private String ime;
+        private String prezime;
         private String email;
         private String brojTelefona;
         private String sifra;
@@ -27,11 +29,13 @@ namespace ParKing.Model
             this.sifra = sifra;
             mojeRezervacije = MojeRezervacije;
         }
-
+        public String Ime { get { return ime; } set { Set(ref ime, value); } }
+        public String Prezime { get { return prezime; } set { Set(ref prezime, value); } }
         public String Email { get { return email; } set { Set(ref email, value); } }
         public String BrojTelefona { get { return brojTelefona; } set { Set(ref brojTelefona, value); } }
         public String Sifra { get { return sifra; } set { Set(ref sifra, value); } }
         public List<Rezervacija> MojeRezervacije { get { return mojeRezervacije; } set { mojeRezervacije = value; } }
+        public String ImePrezime { get { return ime + " " + prezime; } }
 
         protected virtual void OnPropertyChanged(String propertyName)
         {
