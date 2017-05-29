@@ -15,7 +15,9 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <my:DateTimeControl x:Name="DateTimeControl" />
+        <StackPanel Background="#147ad4">
+            <my:DateTimeControl x:Name="DateTimeControl" Grid.Row="0"/>
+        </StackPanel>
         <local:ListaParkingElement x:Name="parkingElement" Grid.Row="1"/>
         <Button Grid.Row="2" Name="rezervisiButton" Style="{StaticResource ButtonStyle}" HorizontalAlignment="Stretch" Content="Rezervisi sad!" Background="Green"/>
     </Grid>
