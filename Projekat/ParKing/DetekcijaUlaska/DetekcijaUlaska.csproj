@@ -35,8 +35,7 @@
   <ItemGroup>
     <Reference Include="OzekiSDK, Version=1.7.0.0, Culture=neutral, PublicKeyToken=4812fb35129b8487, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files\Ozeki\Ozeki SDK\SDK\.NET4\OzekiSDK.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>.\OzekiSDK.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
