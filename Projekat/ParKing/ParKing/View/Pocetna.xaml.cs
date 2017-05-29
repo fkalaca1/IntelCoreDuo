@@ -36,5 +36,7 @@ namespace ParKing.View
         {
             MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
         }
+
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ParKing.Model;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,13 +26,6 @@ namespace ParKing.View
         public Prijava()
         {
             this.InitializeComponent();
-        }
-
-        
-
-        private void loginButton_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
