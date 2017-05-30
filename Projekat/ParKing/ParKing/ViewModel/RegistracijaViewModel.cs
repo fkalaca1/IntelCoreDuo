@@ -9,6 +9,9 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using ParKing.Model;
+using Windows.Security.Cryptography.Core;
+using Windows.Storage.Streams;
+using Windows.Security.Cryptography;
 
 namespace ParKing.ViewModel
 {
@@ -23,7 +26,82 @@ namespace ParKing.ViewModel
         private String email;
         private String password;
         private String repeatPassword;
+        private String errorMessage;
+        private String imeErrorMessage;
+        private String prezimeErrorMessage;
+        private String emailErrorMessage;
+        private String passwordErrorMessage;
+        private String repeatPasswordErrorMessage;
 
+        public String ErrorMessage
+        {
+            get
+            {
+                return errorMessage;
+            }
+            set
+            {
+                Set(ref errorMessage, value);
+            }
+        }
+
+        public String ImeErrorMessage
+        {
+            get
+            {
+                return imeErrorMessage;
+            }
+            set
+            {
+                Set(ref imeErrorMessage, value);
+            }
+        }
+
+        public String PrezimeErrorMessage
+        {
+            get
+            {
+                return prezimeErrorMessage;
+            }
+            set
+            {
+                Set(ref prezimeErrorMessage, value);
+            }
+        }
+        public String EmailErrorMessage
+        {
+            get
+            {
+                return emailErrorMessage;
+            }
+            set
+            {
+                Set(ref emailErrorMessage, value);
+            }
+        }
+
+        public String PasswordErrorMessage
+        {
+            get
+            {
+                return passwordErrorMessage;
+            }
+            set
+            {
+                Set(ref passwordErrorMessage, value);
+            }
+        }
+        public String RepeatPasswordErrorMessage
+        {
+            get
+            {
+                return repeatPasswordErrorMessage;
+            }
+            set
+            {
+                Set(ref repeatPasswordErrorMessage, value);
+            }
+        }
         public String Ime
         {
             get
@@ -90,21 +168,56 @@ namespace ParKing.ViewModel
 
         public void GoBack(object parameter)
         {
-            NavigationService.GoBack();
+            //NavigationService.GoBack();
+            NavigationService.Navigate(typeof(View.Pocetna), new Gost());
         }
-
-        public String ErrorMessage { get; set; }
 
         public void RegistrujSe(object parameter)
         {
             using (var db = new ParkingDBContext())
             {
+                ImeErrorMessage = PrezimeErrorMessage = EmailErrorMessage = PasswordErrorMessage = RepeatPasswordErrorMessage = ""; 
+                bool flag = false;
+                if(Ime == null || Prezime == null || Password == null || RepeatPassword == null || Email == null)
+                {
+                    ErrorMessage = "Obavezno polje";
+                    flag = true;
+                    return;
+                }
+                if(Ime.Length < 3 || Ime.Length > 12)
+                {
+                    ImeErrorMessage = "Ime mora imati minimalno 3 i maximalno 12 karaktera";
+                    flag = true;
+                }
+                if(Prezime.Length < 3)
+                {
+                    PrezimeErrorMessage = "Prezime mora imati minimalno 3 i maximalno 12 karaktera";
+                    flag = true;
+                }
+                if(!(new EmailAddressAttribute().IsValid(Email)))
+                {
+                    EmailErrorMessage = "Pogresan email";
+                    flag = true;
+                }
+                if(Password.Length < 8 || Password.Length > 24)
+                {
+                    PasswordErrorMessage = "Password mora imati minimalno 8 i maximalno 24 karaktera";
+                    flag = true;
+                }
+                
+                if(RepeatPassword != Password)
+                {
+                    RepeatPasswordErrorMessage = "Password se ne podudara";
+                    flag = true;
+                }
+
+                if (flag) return;
                 User noviKorisnik = new User();
 
                 noviKorisnik.Ime = Ime;
                 noviKorisnik.Prezime = Prezime;
-                noviKorisnik.Sifra = Password;
                 noviKorisnik.Email = Email;
+                noviKorisnik.Sifra =  Validacija.createMD5(Password);
 
                 db.Useri.Add(noviKorisnik);
 

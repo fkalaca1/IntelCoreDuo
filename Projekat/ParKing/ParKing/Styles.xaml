@@ -11,7 +11,7 @@
 
     <Style TargetType="TextBox" x:Name="TextBoxStyle">
 
-        <Setter Property="Margin" Value="0,10,0,10" />
+        <Setter Property="Margin" Value="0,10,0,0" />
         <Setter Property="Background" Value="White" />
         <Setter Property="FontFamily" Value="Arial" />
         <Setter Property="FontWeight" Value="Bold" />
@@ -75,7 +75,7 @@
 
     <Style TargetType="PasswordBox" x:Name="PasswordBoxStyle">
 
-        <Setter Property="Margin" Value="0,10,0,10" />
+        <Setter Property="Margin" Value="0,10,0,0" />
         <Setter Property="Background" Value="White" />
         <Setter Property="FontFamily" Value="Arial" />
         <Setter Property="FontWeight" Value="Bold" />

@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.Devices.Geolocation;
+using ParKing.Model;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -37,6 +38,27 @@ namespace ParKing.View
             MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
         }
 
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            if(e.Parameter is Gost)
+            {
+                userMenu.Visibility = Visibility.Collapsed;
+                AdminMenu.Visibility = Visibility.Collapsed;
+                GuestMenu.Visibility = Visibility.Visible;
+            }
+            else if(e.Parameter is Administrator)
+            {
+                userMenu.Visibility = Visibility.Collapsed;
+                AdminMenu.Visibility = Visibility.Visible;
+                GuestMenu.Visibility = Visibility.Collapsed;
+            }
+            else if(e.Parameter is User)
+            {
+                userMenu.Visibility = Visibility.Visible;
+                AdminMenu.Visibility = Visibility.Collapsed;
+                GuestMenu.Visibility = Visibility.Collapsed;
+            }
+        }
 
     }
 }

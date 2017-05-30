@@ -98,6 +98,7 @@
     <Compile Include="Helper\INavigationService.cs" />
     <Compile Include="Helper\NavigationService.cs" />
     <Compile Include="Helper\RelayCommand.cs" />
+    <Compile Include="Helper\Validacija.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -144,6 +145,9 @@
     </Compile>
     <Compile Include="View\UserControls\EditElement.xaml.cs">
       <DependentUpon>EditElement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\GuestMenu.xaml.cs">
+      <DependentUpon>GuestMenu.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\UserControls\ListaRezElement.xaml.cs">
       <DependentUpon>ListaRezElement.xaml</DependentUpon>
@@ -244,6 +248,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\UserControls\AdminMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserControls\GuestMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -27,8 +27,11 @@
                    OpenPaneLength="200"
                    Background="White">
             <SplitView.Pane>
-                <my:UserMenu x:Name="userMenu"/>
-                
+                <StackPanel>
+                    <my:UserMenu x:Name="userMenu" />
+                    <my:AdminMenu x:Name="AdminMenu" Visibility="Collapsed" />
+                    <my:GuestMenu x:Name="GuestMenu" Visibility="Collapsed" />
+                </StackPanel>
             </SplitView.Pane>
             <SplitView.Content>
                 <Maps:MapControl 
