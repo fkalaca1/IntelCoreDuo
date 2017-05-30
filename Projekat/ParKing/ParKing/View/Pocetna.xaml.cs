@@ -14,6 +14,9 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.Devices.Geolocation;
 using ParKing.Model;
+using ParKing.ViewModel;
+using Windows.UI.Xaml.Controls.Maps;
+using Windows.Storage.Streams;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -27,15 +30,34 @@ namespace ParKing.View
         public Pocetna()
         {
             this.InitializeComponent();
+
             BasicGeoposition location = new BasicGeoposition();
             location.Latitude = 43.8563;
             location.Longitude = 18.4131;
             MapControl1.Center = new Geopoint(location);
+
+            AddPushpin(43.8563, 18.4131);
+            AddPushpin(43.8521, 18.4122);
+            AddPushpin(43.8542, 18.4141);
         }
 
         private void HamburgerButton_Click(object sender, RoutedEventArgs e)
         {
             MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+        }
+        public void AddPushpin(double lat, double lon)
+        {
+            BasicGeoposition location = new BasicGeoposition();
+            location.Latitude = lat;
+            location.Longitude = lon;
+
+            var icon = new MapIcon();
+            icon.Image = RandomAccessStreamReference.CreateFromUri(new Uri("ms-appx:///Assets/parkingMapIcon.png"));
+            icon.Location = new Geopoint(location);
+            icon.NormalizedAnchorPoint = new Point(0.5, 1);
+
+            MapControl1.MapElements.Add(icon);
+            Windows.UI.Xaml.Controls.Maps.MapControl.SetLocation(icon, new Geopoint(location));
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
