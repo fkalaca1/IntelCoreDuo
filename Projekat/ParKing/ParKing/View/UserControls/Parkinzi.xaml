@@ -8,20 +8,26 @@
     xmlns:my="using:ParKing.View"
     mc:Ignorable="d"
     d:DesignHeight="300">
-
-    <ListBox ItemsSource="{Binding User.MojiParkinzi}" HorizontalContentAlignment="Stretch">
-        <ListBox.ItemContainerStyle>
-            <Style TargetType="ListBoxItem">
-                <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
-                <Setter Property="VerticalContentAlignment" Value="Stretch"></Setter>
-                <Setter Property="Background" Value="White"></Setter>
-            </Style>
-        </ListBox.ItemContainerStyle>
-        <ListBox.ItemTemplate>
-            <DataTemplate>
-                <my:ListaParkingElement AdresaTextBlock="{Binding Path=Adresa}" BrTelefonaHyperlingButton="{Binding Path=BrojTelefona}" RatingP="{Binding Path=Prosjek}" RatingTextBlock="{Binding Path=BrOcjena}"
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button Style="{StaticResource ButtonStyle}" Grid.Row="0" Content="Dodaj Parking" HorizontalAlignment="Stretch" Background="#147ad4"/>
+        <ListBox ItemsSource="{Binding User.MojiParkinzi}" HorizontalContentAlignment="Stretch" Grid.Row="1">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+                    <Setter Property="VerticalContentAlignment" Value="Stretch"></Setter>
+                    <Setter Property="Background" Value="White"></Setter>
+                </Style>
+            </ListBox.ItemContainerStyle>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <my:ListaParkingElement AdresaTextBlock="{Binding Path=Adresa}" BrTelefonaHyperlingButton="{Binding Path=BrojTelefona}" RatingP="{Binding Path=Prosjek}" RatingTextBlock="{Binding Path=BrOcjena}"
                                         CijenaTextBlock="{Binding Path=DajCijenu}" KapacitetTextBlock="{Binding Path=KapacitetP}"/>
-            </DataTemplate>
-        </ListBox.ItemTemplate>
-    </ListBox>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
 </UserControl>

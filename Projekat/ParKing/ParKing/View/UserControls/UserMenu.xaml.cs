@@ -48,7 +48,7 @@ namespace ParKing.View.UserControls
             }
             else if(RezervacijeListBoxItem.IsSelected)
             {
-                NavigationService.Navigate(typeof(View.MojeRezervacije));
+                NavigationService.Navigate(typeof(View.MojeRezervacije), PocetnaViewModel.Korisnik);
             }
             else if(OdjavaListBoxItem.IsSelected)
             {

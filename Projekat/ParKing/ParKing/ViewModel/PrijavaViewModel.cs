@@ -60,7 +60,6 @@ namespace ParKing.ViewModel
                     {
                         if (user.Sifra == (Validacija.createMD5(Password)))
                         {
-                            ErrorMessage = "Dobro";
                             NavigationService.Navigate(typeof(View.Pocetna), user);
                         }
                         ErrorMessage = "Pogresna sifra ili mail";
