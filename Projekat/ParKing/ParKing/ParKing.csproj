@@ -122,6 +122,7 @@
     <Compile Include="ViewModel\ListaParkingaViewModel.cs" />
     <Compile Include="ViewModel\ParkingViewModel.cs" />
     <Compile Include="ViewModel\PocetnaViewModel.cs" />
+    <Compile Include="ViewModel\PrijavaViewModel.cs" />
     <Compile Include="ViewModel\RegistracijaParkingaViewModel.cs" />
     <Compile Include="ViewModel\RegistracijaViewModel.cs" />
     <Compile Include="ViewModel\RezervacijaViewModel.cs" />

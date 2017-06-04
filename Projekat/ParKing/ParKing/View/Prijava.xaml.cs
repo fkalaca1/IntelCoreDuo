@@ -27,16 +27,7 @@ namespace ParKing.View
         public Prijava()
         {
             this.InitializeComponent();
-        }
-
-        private void loginButton_Click(object sender, RoutedEventArgs e)
-        {
-            using (var db = new ParkingDBContext())
-            {
-                foreach (var user in db.Useri)
-                    if (usernameTexBox.Text == user.Email && Validacija.createMD5(passwordTexBox.Password) == user.Sifra)
-                        Frame.Navigate(typeof(View.Pocetna), user);
-            }
+            this.DataContext = new ViewModel.PrijavaViewModel();
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ParKing.Model;
+using ParKing.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -39,5 +41,11 @@ namespace ParKing.View
             profilKontrola.Visibility = Visibility.Collapsed;
             profilParkinzi.Visibility = Visibility.Visible;
         }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            ((UserViewModel)this.DataContext).User = e.Parameter as User;
+        }
+
     }
 }
