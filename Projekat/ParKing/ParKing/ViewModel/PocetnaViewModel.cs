@@ -18,7 +18,10 @@ namespace ParKing.ViewModel
         public ObservableCollection<ParkingRezervacija> ParkinziRezervacije { get; set; }
         public Parking Parking { get; set; }
         public ParkingRezervacija ParkingRezervacija { get; set; }
-        public User Korisnik { get; set; }
+        public static User Korisnik { get; set; }
+        public VlasnikParkinga Vlasnik { get; set; }
+        public Administrator Admin { get; set; }
+        public Gost Gost { get; set; }
 
         public ICommand RezervisiBtn { get; set; }
 
@@ -65,6 +68,9 @@ namespace ParKing.ViewModel
             ParkinziRezervacije = new ObservableCollection<ParkingRezervacija>();
             ParkingRezervacija = new ParkingRezervacija();
             Parking = new Parking();
+            //Korisnik = new User();
+            Admin = new Administrator();
+            Vlasnik = new VlasnikParkinga();
 
             RezervisanoOd = String.Format("{0:d MMMM yyyy, HH:mm}", DateTime.Now);
             RezervisanoDo = String.Format("{0:d MMMM yyyy, HH:mm}", DateTime.Now.AddHours(1.0));
@@ -89,23 +95,26 @@ namespace ParKing.ViewModel
             {
                 return;
             }
-            UkupnaCijena = (ParkingRezervacija.Cijena * (rezervacijaDo - rezervacijaOd).TotalHours).ToString();
+            UkupnaCijena = (ParkingRezervacija.Cijena * (int)(rezervacijaDo - rezervacijaOd).TotalHours).ToString();
 
             Rezervacija rezervacija = new Rezervacija();
             rezervacija.PocetakRezervacije = RezervisanoOd;
             rezervacija.KrajRezervacije = RezervisanoDo;
             rezervacija.Cijena = UkupnaCijena;
             rezervacija.ParkingRezervacijaId = ParkingRezervacija.ParkingRezervacijaId;
-            rezervacija.UserId = 1;//Korisnik.UserId;
+            rezervacija.UserId = Korisnik.UserId;
             
             using(var db = new ParkingDBContext())
             {
                 db.Rezervacije.Add(rezervacija);
 
                 db.SaveChanges();
+                rezervacija.RezervisaniParking = db.ParkingRezervacija.FirstOrDefault(p => p.ParkingRezervacijaId == ParkingRezervacija.ParkingRezervacijaId);
+
                 Validacija.message(rezervacija.ToString(), "Uspjesna rezervacija");
             }            
         }
+
 
         public event PropertyChangedEventHandler PropertyChanged;
 

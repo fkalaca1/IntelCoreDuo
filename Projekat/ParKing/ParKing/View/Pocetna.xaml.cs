@@ -67,14 +67,15 @@ namespace ParKing.View
                 userMenu.Visibility = Visibility.Collapsed;
                 AdminMenu.Visibility = Visibility.Visible;
                 GuestMenu.Visibility = Visibility.Collapsed;
+                PocetnaViewModel.Korisnik = e.Parameter as Administrator;
             }
             else if (e.Parameter is User)
             {
                 userMenu.Visibility = Visibility.Visible;
                 AdminMenu.Visibility = Visibility.Collapsed;
                 GuestMenu.Visibility = Visibility.Collapsed;
+                PocetnaViewModel.Korisnik = e.Parameter as User;
             }
-            ((PocetnaViewModel)this.DataContext).Korisnik = e.Parameter as User;
         }
         private void MapControl1_MapElementClick(MapControl sender, MapElementClickEventArgs args)
         {

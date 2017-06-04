@@ -1,4 +1,6 @@
 ﻿using ParKing.Helper;
+using ParKing.Model;
+using ParKing.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -24,8 +26,10 @@ namespace ParKing.View.UserControls
         public UserMenu()
         {
             this.InitializeComponent();
+            //Korisnik = new User();
             NavigationService = new NavigationService();
-
+            //this.DataContext = new PocetnaViewModel();
+            //Korisnik = PocetnaViewModel.Korisnik;
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -48,7 +52,7 @@ namespace ParKing.View.UserControls
             }
             else if(RezervacijeListBoxItem.IsSelected)
             {
-                NavigationService.Navigate(typeof(View.MojeRezervacije));
+                NavigationService.Navigate(typeof(View.MojeRezervacije), PocetnaViewModel.Korisnik);
             }
         }
     }

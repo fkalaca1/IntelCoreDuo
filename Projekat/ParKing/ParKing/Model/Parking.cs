@@ -113,7 +113,7 @@ namespace ParKing.Model
             }
         }
 
-        public String BrOcjena { get { return "(" + ocjene.Count + ")"; } }
+        public String BrOcjena { get { if(ocjene!=null) return "(" + ocjene.Count + ")";  return "0"; } }
 
         protected virtual void OnPropertyChanged(String propertyName)
         {

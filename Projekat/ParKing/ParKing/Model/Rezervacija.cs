@@ -43,17 +43,17 @@ namespace ParKing.Model
             }
             set
             {
-                rezervisaniParking = value;
+                Set(ref rezervisaniParking, value);
             }
         }
         public String ImeTmp
         {
-            get { return "Scc Parking"; }
+            get { return rezervisaniParking.Adresa; }
         }
 
         public String PocKrajRez
         {
-           get { return pocetakRezervacije + "/" + krajRezervacije; }
+           get { return pocetakRezervacije + "  do  " + krajRezervacije; }
         }
 
         public String PocetakRezervacije
@@ -90,6 +90,7 @@ namespace ParKing.Model
             }
         }
 
+
         public Rezervacija()
         {
 
@@ -97,7 +98,7 @@ namespace ParKing.Model
 
         public override string ToString()
         {
-            return "Rezervisano od " + PocetakRezervacije + " do " + KrajRezervacije + "\n" + "Placeno: " + Cijena + " KM\n";// + RezervisaniParking.Adresa;
+            return "Rezervisano od " + PocetakRezervacije + " do " + KrajRezervacije + "\n" + "Placeno: " + Cijena + " KM\n" + "Rezervisani parking: " + RezervisaniParking.Adresa;
         }
         public event PropertyChangedEventHandler PropertyChanged;
 

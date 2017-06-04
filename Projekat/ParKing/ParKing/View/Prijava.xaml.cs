@@ -1,4 +1,5 @@
-﻿using ParKing.Model;
+﻿using ParKing.Helper;
+using ParKing.Model;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -30,7 +31,12 @@ namespace ParKing.View
 
         private void loginButton_Click(object sender, RoutedEventArgs e)
         {
-
+            using (var db = new ParkingDBContext())
+            {
+                foreach (var user in db.Useri)
+                    if (usernameTexBox.Text == user.Email && Validacija.createMD5(passwordTexBox.Password) == user.Sifra)
+                        Frame.Navigate(typeof(View.Pocetna), user);
+            }
         }
     }
 }
