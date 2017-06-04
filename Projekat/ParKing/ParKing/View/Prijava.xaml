@@ -24,7 +24,7 @@
                 <TextBox Style="{StaticResource TextBoxStyle}" PlaceholderText="Username" Name="usernameTexBox" Text="{Binding Username, Mode=TwoWay}"/>
                 <PasswordBox Style="{StaticResource PasswordBoxStyle}" PlaceholderText="Password" Name="passwordTexBox" Password="{Binding Password, Mode=TwoWay}"/>
                 <TextBlock Text="{Binding ErrorMessage}" Foreground="Red" FontSize="10" />
-                <Button Command="{Binding Login}" Style="{StaticResource ButtonStyle}" Content="Prijavi se" Background="Green" Name="loginButton" HorizontalAlignment="Stretch"/>
+                <Button Command="{Binding Login}" Click="loginButton_Click" Style="{StaticResource ButtonStyle}" Content="Prijavi se" Background="Green" Name="loginButton" HorizontalAlignment="Stretch"/>
                 <HyperlinkButton Content="Zaboravili ste lozinku?" Name="passwordButton" Margin="0,0,0,0" Foreground="AliceBlue"/>
                 <Button  Style="{StaticResource ButtonStyle}" Content="Prijavi se sa Google+" Name="googleButton" Background="Red" HorizontalAlignment="Stretch"/>
             </StackPanel>

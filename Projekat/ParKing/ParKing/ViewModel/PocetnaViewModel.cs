@@ -68,7 +68,7 @@ namespace ParKing.ViewModel
             ParkinziRezervacije = new ObservableCollection<ParkingRezervacija>();
             ParkingRezervacija = new ParkingRezervacija();
             Parking = new Parking();
-            //Korisnik = new User();
+            Korisnik = new User();
             Admin = new Administrator();
             Vlasnik = new VlasnikParkinga();
 
