@@ -11,8 +11,8 @@ namespace ParKing.Model
 {
     public class Rezervacija : INotifyPropertyChanged
     {
-        private DateTime pocetakRezervacije;
-        private DateTime krajRezervacije;
+        private String pocetakRezervacije;
+        private String krajRezervacije;
         private String cijena;
         private User korisnik;
         private ParkingRezervacija rezervisaniParking;
@@ -56,7 +56,7 @@ namespace ParKing.Model
            get { return pocetakRezervacije + "/" + krajRezervacije; }
         }
 
-        public DateTime PocetakRezervacije
+        public String PocetakRezervacije
         {
             get
             {
@@ -67,7 +67,7 @@ namespace ParKing.Model
                 Set(ref pocetakRezervacije, value);
             }
         }
-        public DateTime KrajRezervacije
+        public String KrajRezervacije
         {
             get
             {
@@ -82,7 +82,7 @@ namespace ParKing.Model
         {
             get
             {
-                return cijena+" KM";
+                return cijena;
             }
             set
             {
@@ -95,6 +95,10 @@ namespace ParKing.Model
 
         }
 
+        public override string ToString()
+        {
+            return "Rezervisano od " + PocetakRezervacije + " do " + KrajRezervacije + "\n" + "Placeno: " + Cijena + " KM\n";// + RezervisaniParking.Adresa;
+        }
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void OnPropertyChanged(String propertyName)

@@ -102,9 +102,9 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20170528142927_initialMigration.cs" />
-    <Compile Include="Migrations\20170528142927_initialMigration.designer.cs">
-      <DependentUpon>20170528142927_initialMigration.cs</DependentUpon>
+    <Compile Include="Migrations\20170604122402_InitialMigration.cs" />
+    <Compile Include="Migrations\20170604122402_InitialMigration.designer.cs">
+      <DependentUpon>20170604122402_InitialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\ParkingDBContextModelSnapshot.cs" />
     <Compile Include="Model\Administrator.cs" />
@@ -121,6 +121,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\ListaParkingaViewModel.cs" />
     <Compile Include="ViewModel\ParkingViewModel.cs" />
+    <Compile Include="ViewModel\PocetnaViewModel.cs" />
     <Compile Include="ViewModel\RegistracijaParkingaViewModel.cs" />
     <Compile Include="ViewModel\RegistracijaViewModel.cs" />
     <Compile Include="ViewModel\RezervacijaViewModel.cs" />

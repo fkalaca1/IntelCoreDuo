@@ -7,12 +7,14 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps">
+    xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
+    Loaded="Page_Loaded" >
     
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
 
         <RelativePanel Background="#147ad4">
@@ -38,11 +40,22 @@
                    x:Name="MapControl1" 
                    MapServiceToken="UsKqNshJCjQOJIYNBwAq~DKAV_BIAJxkdLlkqYdJcxQ~AsVz7Vo_lacmlvQMp_T-Z3kLOKTYvN8pqooda9mmh-jAVYYMfDJz9UuGlMArseAg"
                    ZoomLevel="15"  
-                   Grid.Row="1" Grid.Column="1"/>
+                   MapElementClick="MapControl1_MapElementClick"  Grid.RowSpan="2" Grid.Column="1"/>
             </SplitView.Content>
 
         </SplitView>
 
-
+        <Grid Grid.Row="2" Grid.Column="1" Visibility="Collapsed" x:Name="popUp" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <StackPanel Background="#147ad4">
+                <my:DateTimeControl RezervisanoOd="{Binding RezervisanoOd, Mode=TwoWay}" RezervisanoDo="{Binding RezervisanoDo, Mode=TwoWay}" x:Name="DateTimeControl" Grid.Row="0"/>
+            </StackPanel>
+            <local:ListaParkingElement x:Name="parkingElement" Grid.Row="1"/>
+            <Button Command="{Binding RezervisiBtn}" Grid.Row="2" Name="rezervisiButton" Style="{StaticResource ButtonStyle}" HorizontalAlignment="Stretch" Content="Rezervisi" Background="Green"/>
+        </Grid>
     </Grid>
 </Page>

@@ -19,7 +19,10 @@ namespace ParKing.Model
         private int kapacitet;
         private double cijena;
         private List<Ocjena> ocjene;
-       
+        private double geoSirina;
+        private double geoDuzina;
+
+              
         public Parking()
         {
 
@@ -36,6 +39,30 @@ namespace ParKing.Model
 
         public virtual String KapacitetP { get { return "(-/" + kapacitet + ")"; } }
 
+        public double GeoSirina
+        {
+            get
+            {
+                return geoSirina;
+            }
+
+            set
+            {
+                Set(ref geoSirina, value);
+            }
+        }
+        public double GeoDuzina
+        {
+            get
+            {
+                return geoDuzina;
+            }
+
+            set
+            {
+                Set(ref geoDuzina, value);
+            }
+        }
         public String Adresa
         {
             get { return adresa; }
@@ -77,7 +104,7 @@ namespace ParKing.Model
             get
             {
                 double povratna = 0;
-                if (ocjene.Count == 0) return 0;
+                if (ocjene == null || ocjene.Count == 0) return 0;
                 for (int i = 0; i < ocjene.Count; i++)
                 {
                     povratna += ocjene[i].OcjenaP;

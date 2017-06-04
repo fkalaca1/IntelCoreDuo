@@ -29,7 +29,7 @@
                 </ListBox.ItemContainerStyle>
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <local:ListaParkingElement AdresaTextBlock="{Binding Adresa}" BrTelefonaHyperlingButton="{Binding BrojTelefona}" RatingP="{Binding Prosjek}" RatingTextBlock="{Binding BrOcjena}" CijenaTextBlock="{Binding DajCijenu}" KapacitetTextBlock="{Binding Kapacitet}" />
+                        <local:ListaParkingElement x:Name="lp" AdresaTextBlock="{Binding Adresa}" BrTelefonaHyperlingButton="{Binding BrojTelefona}" RatingP="{Binding Prosjek}" RatingTextBlock="{Binding BrOcjena}" CijenaTextBlock="{Binding DajCijenu}" KapacitetTextBlock="{Binding Kapacitet}" />
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
