@@ -1,4 +1,5 @@
 ﻿using ParKing.Helper;
+using ParKing.Model;
 using ParKing.ViewModel;
 using System;
 using System.Collections.Generic;

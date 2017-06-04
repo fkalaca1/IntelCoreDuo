@@ -18,6 +18,7 @@ namespace ParKing.ViewModel
 
         public ICommand Back { get; set; }
         INavigationService NavigationService { get; set; }
+        
         private Parking selectedItem;
         public Parking SelectedItem
         {
@@ -25,7 +26,7 @@ namespace ParKing.ViewModel
             set
             {
                 selectedItem = value;
-
+                
                 NavigationService.Navigate(typeof(View.DetaljiParkinga), selectedItem);
             }
         }

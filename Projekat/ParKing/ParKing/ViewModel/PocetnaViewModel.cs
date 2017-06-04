@@ -23,6 +23,7 @@ namespace ParKing.ViewModel
         public Administrator Admin { get; set; }
         public Gost Gost { get; set; }
 
+
         public ICommand RezervisiBtn { get; set; }
 
         private String rezervisanoOd;
@@ -68,7 +69,7 @@ namespace ParKing.ViewModel
             ParkinziRezervacije = new ObservableCollection<ParkingRezervacija>();
             ParkingRezervacija = new ParkingRezervacija();
             Parking = new Parking();
-            Korisnik = new User();
+            //Korisnik = new User();
             Admin = new Administrator();
             Vlasnik = new VlasnikParkinga();
 
