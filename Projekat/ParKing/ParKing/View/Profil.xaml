@@ -23,7 +23,7 @@
             />
             <TextBlock Style="{StaticResource TekstStranice3}" Name="naslovTextBlock" RelativePanel.AlignVerticalCenterWith="BackButton" Text="Moj profil" RelativePanel.RightOf="BackButton"/>
         </RelativePanel>
-        <my:UserElement Grid.Row="1"  MailTextBlock="{Binding User.Email}"/>
+        <my:UserElement Grid.Row="1" MailTextBlock="{Binding User.Email}"/>
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>

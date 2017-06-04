@@ -18,6 +18,7 @@ namespace ParKing.Model
         private Parking maticni;
         private User ocjenitelj;
 
+        public Ocjena() { }
         public event PropertyChangedEventHandler PropertyChanged;
 
         public Ocjena(int ocjenaP, String komentar, Parking maticni, User ocjenitelj)

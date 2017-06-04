@@ -29,22 +29,28 @@
                    Margin="0,30,0,15" Stretch="Uniform"/>
             </StackPanel>
 
+
             <RelativePanel Grid.Row="1" Grid.Column="1">
                 <StackPanel  RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True">
-                    <TextBox Style="{StaticResource TextBoxStyle}" PlaceholderText="Ime" x:Name="nameTextBox" />
+                    <TextBox Style="{StaticResource TextBoxStyle}" PlaceholderText="Ime" x:Name="nameTextBox" Text="{Binding Ime, Mode=TwoWay}" />
+                    <TextBlock Text="{Binding ImeErrorMessage}" Foreground="Red" FontSize="10" />
 
-                    <TextBox Style="{StaticResource TextBoxStyle}" PlaceholderText="Prezime" x:Name="surnameTextBox" />
+                    <TextBox Style="{StaticResource TextBoxStyle}" PlaceholderText="Prezime" x:Name="surnameTextBox"  Text="{Binding Prezime, Mode=TwoWay}"/>
+                    <TextBlock Text="{Binding PrezimeErrorMessage}" Foreground="Red" FontSize="10" />
 
-                    <TextBox Style="{StaticResource TextBoxStyle}" PlaceholderText="E-Mail" x:Name="emailTextBox" />
+                    <TextBox Style="{StaticResource TextBoxStyle}" PlaceholderText="E-Mail" x:Name="emailTextBox" Text="{Binding Email, Mode=TwoWay}"/>
+                    <TextBlock Text="{Binding EmailErrorMessage}" Foreground="Red" FontSize="10" />
 
-                    <PasswordBox Style="{StaticResource PasswordBoxStyle}" PlaceholderText="Lozinka" x:Name="passwordTextBox" />
+                    <PasswordBox Style="{StaticResource PasswordBoxStyle}" PlaceholderText="Lozinka" x:Name="passwordTextBox" Password="{Binding Password, Mode=TwoWay}"/>
+                    <TextBlock Text="{Binding PasswordErrorMessage}" Foreground="Red" FontSize="10" />
 
-                    <PasswordBox Style="{StaticResource PasswordBoxStyle}" PlaceholderText="Potvrdite lozinku" x:Name="repeatPasswordTextBox" />
+                    <PasswordBox Style="{StaticResource PasswordBoxStyle}" PlaceholderText="Potvrdite lozinku" x:Name="repeatPasswordTextBox" Password="{Binding RepeatPassword, Mode=TwoWay}"/>
+                    <TextBlock Text="{Binding RepeatPasswordErrorMessage}" Foreground="Red" FontSize="10" />
 
-                    <CheckBox Content="Slazem se sa pravilima koriscenja!" Name="pravilaCheckBox"/>
-
-                    <Button Style="{StaticResource ButtonStyle}" Margin="0,15,0,15" Content="Registruj se" HorizontalAlignment="Stretch" Background="#FF1DA000"/>
-                 </StackPanel>
+                    <CheckBox Content="Slazem se sa pravilima koriscenja!" Name="pravilaCheckBox" IsChecked="{Binding BoxChecked, Mode=TwoWay}"/>
+                    <TextBlock Text="{Binding CheckBoxErrorMessage}" Foreground="Red" FontSize="10" />
+                    <Button  Style="{StaticResource ButtonStyle}" Margin="0,15,0,15" Content="Registruj se" HorizontalAlignment="Stretch" Background="#FF1DA000" Command="{Binding Register}"/>
+                </StackPanel>
             </RelativePanel>
         </Grid>
     </ScrollViewer>

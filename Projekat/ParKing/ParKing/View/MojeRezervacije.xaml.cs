@@ -1,4 +1,5 @@
 ﻿using ParKing.Helper;
+using ParKing.Model;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -29,6 +30,23 @@ namespace ParKing.View
             this.InitializeComponent();
             this.DataContext = new ViewModel.RezervacijaViewModel();
             NavigationService = new NavigationService();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            if(e.Parameter is User)
+            {
+                using (var db = new ParkingDBContext())
+                {
+                    foreach (var r in db.Rezervacije)
+                        if (r.UserId == (e.Parameter as User).UserId)
+                            ((ViewModel.RezervacijaViewModel)this.DataContext).Rezervacije.Add(r);
+
+                    foreach (var rezervacija in ((ViewModel.RezervacijaViewModel)this.DataContext).Rezervacije)
+                        rezervacija.RezervisaniParking = db.ParkingRezervacija.FirstOrDefault(p => p.ParkingRezervacijaId == rezervacija.ParkingRezervacijaId);
+                }
+
+            }
         }
     }
 }

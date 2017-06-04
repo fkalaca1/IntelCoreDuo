@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ParKing.Model
 {
-    class Gost
+    public class Gost
     {
 
     }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ParKing.Helper;
+using ParKing.Model;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,9 +27,8 @@ namespace ParKing.View
         public Prijava()
         {
             this.InitializeComponent();
+            this.DataContext = new ViewModel.PrijavaViewModel();
         }
-
-        
 
         private void loginButton_Click(object sender, RoutedEventArgs e)
         {

@@ -1,6 +1,5 @@
 ﻿using ParKing.Helper;
 using ParKing.Model;
-using ParKing.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -20,40 +19,33 @@ using Windows.UI.Xaml.Navigation;
 
 namespace ParKing.View.UserControls
 {
-    public sealed partial class UserMenu : UserControl
+    public sealed partial class GuestMenu : UserControl
     {
         INavigationService NavigationService { get; set; }
-        public UserMenu()
+        public GuestMenu()
         {
             this.InitializeComponent();
             NavigationService = new NavigationService();
+
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if(ProfilListBoxItem.IsSelected)
+            if (PocetnaListBoxItem.IsSelected)
             {
-                NavigationService.Navigate(typeof(View.Profil));
+                NavigationService.Navigate(typeof(View.Pocetna), new Gost());
             }
-            else if(PocetnaListBoxItem.IsSelected)
-            {
-                NavigationService.Navigate(typeof(View.Pocetna), PocetnaViewModel.Korisnik);
-            }
-            else if(ListaParkingaListBoxItem.IsSelected)
+            else if (ListaParkingaListBoxItem.IsSelected)
             {
                 NavigationService.Navigate(typeof(View.ListaParkinga));
             }
-            else if(RegistrujParkingListBoxItem.IsSelected)
-            {
-                NavigationService.Navigate(typeof(View.RegistracijaParkinga));
-            }
-            else if(RezervacijeListBoxItem.IsSelected)
-            {
-                NavigationService.Navigate(typeof(View.MojeRezervacije), PocetnaViewModel.Korisnik);
-            }
-            else if(OdjavaListBoxItem.IsSelected)
+            else if(PrijavaListBoxItem.IsSelected)
             {
                 NavigationService.Navigate(typeof(View.Prijava));
+            }
+            else if(RegistracijaListBoxItem.IsSelected)
+            {
+                NavigationService.Navigate(typeof(View.Registracija));
             }
         }
     }

@@ -14,6 +14,27 @@ namespace ParKingMigrations
             builder
                 .Annotation("ProductVersion", "7.0.0-beta6-13815");
 
+            builder.Entity("ParKing.Model.Administrator", b =>
+                {
+                    b.Property<int>("AdministratorId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("BrojTelefona");
+
+                    b.Property<string>("Email");
+
+                    b.Property<string>("Ime");
+
+                    b.Property<string>("Prezime");
+
+                    b.Property<string>("Sifra");
+
+                    b.Property<int>("UserId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Key("AdministratorId");
+                });
+
             builder.Entity("ParKing.Model.Ocjena", b =>
                 {
                     b.Property<int>("OcjenaId")
@@ -41,6 +62,10 @@ namespace ParKingMigrations
 
                     b.Property<double>("Cijena");
 
+                    b.Property<double>("GeoDuzina");
+
+                    b.Property<double>("GeoSirina");
+
                     b.Property<int>("Kapacitet");
 
                     b.Property<int?>("VlasnikParkingaVlasnikParkingaId");
@@ -65,6 +90,10 @@ namespace ParKingMigrations
 
                     b.Property<double>("Cijena");
 
+                    b.Property<double>("GeoDuzina");
+
+                    b.Property<double>("GeoSirina");
+
                     b.Property<int>("Kapacitet");
 
                     b.Property<int>("ParkingId")
@@ -79,6 +108,8 @@ namespace ParKingMigrations
                 {
                     b.Property<int>("RezervacijaId")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<int?>("AdministratorAdministratorId");
 
                     b.Property<string>("Cijena");
 
@@ -165,6 +196,10 @@ namespace ParKingMigrations
 
             builder.Entity("ParKing.Model.Rezervacija", b =>
                 {
+                    b.Reference("ParKing.Model.Administrator")
+                        .InverseCollection()
+                        .ForeignKey("AdministratorAdministratorId");
+
                     b.Reference("ParKing.Model.ParkingRezervacija")
                         .InverseCollection()
                         .ForeignKey("ParkingRezervacijaId");

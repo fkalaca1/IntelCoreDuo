@@ -12,6 +12,7 @@ namespace ParKing.Model
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int VlasnikParkingaId { get; set; }
         private List<Parking> mojiParkinzi;
+        public VlasnikParkinga() { }
         public VlasnikParkinga(string email, string brojTelefona, string sifra, List<Parking> mojiParkinzi, List<Rezervacija> rezervacije) : base(email, brojTelefona, sifra, rezervacije)
         {
             this.mojiParkinzi = mojiParkinzi;
