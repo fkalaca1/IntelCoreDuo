@@ -32,6 +32,8 @@ namespace ParKing.ViewModel
         private String emailErrorMessage;
         private String passwordErrorMessage;
         private String repeatPasswordErrorMessage;
+        private String checkBoxErrorMessage;
+        private bool boxChecked;
 
         public String ErrorMessage
         {
@@ -102,6 +104,17 @@ namespace ParKing.ViewModel
                 Set(ref repeatPasswordErrorMessage, value);
             }
         }
+        public String CheckBoxErrorMessage
+        {
+            get
+            {
+                return checkBoxErrorMessage;
+            }
+            set
+            {
+                Set(ref checkBoxErrorMessage, value);
+            }
+        }
         public String Ime
         {
             get
@@ -157,7 +170,17 @@ namespace ParKing.ViewModel
                 Set(ref repeatPassword, value);
             }
         }
-
+        public bool BoxChecked
+        {
+            get
+            {
+                return boxChecked;
+            }
+            set
+            {
+                Set(ref boxChecked, value);
+            }
+        }
 
         public RegistracijaViewModel()
         {
@@ -211,6 +234,12 @@ namespace ParKing.ViewModel
                     flag = true;
                 }
 
+                if(!BoxChecked)
+                {
+                    CheckBoxErrorMessage = "Morate prihvatiti uslove koristenja";
+                    flag = true;
+                }
+
                 if (flag) return;
                 User noviKorisnik = new User();
 
@@ -223,7 +252,7 @@ namespace ParKing.ViewModel
 
                 db.SaveChanges();
 
-                NavigationService.Navigate(typeof(View.Pocetna));//, noviKorisnik);
+                NavigationService.Navigate(typeof(View.Pocetna), noviKorisnik);
             }
             
         }

@@ -21,9 +21,10 @@
         <Image Grid.Row="0" Grid.Column="1" Source="ms-appx:///Assets/parkingLogo.png" Margin="0,100,0,10" Stretch="Uniform"/>
         <ScrollViewer Grid.Row="1" Grid.Column="1" VerticalScrollBarVisibility="Auto">
             <StackPanel>
-                <TextBox Style="{StaticResource TextBoxStyle}" PlaceholderText="Username" Name="usernameTexBox"/>
-                <PasswordBox Style="{StaticResource PasswordBoxStyle}" PlaceholderText="Password" Name="passwordTexBox"/>
-                <Button Click="loginButton_Click" Style="{StaticResource ButtonStyle}" Content="Prijavi se" Background="Green" Name="loginButton" HorizontalAlignment="Stretch"/>
+                <TextBox Style="{StaticResource TextBoxStyle}" PlaceholderText="Username" Name="usernameTexBox" Text="{Binding Username, Mode=TwoWay}"/>
+                <PasswordBox Style="{StaticResource PasswordBoxStyle}" PlaceholderText="Password" Name="passwordTexBox" Password="{Binding Password, Mode=TwoWay}"/>
+                <TextBlock Text="{Binding ErrorMessage}" Foreground="Red" FontSize="10" />
+                <Button Command="{Binding Login}" Style="{StaticResource ButtonStyle}" Content="Prijavi se" Background="Green" Name="loginButton" HorizontalAlignment="Stretch"/>
                 <HyperlinkButton Content="Zaboravili ste lozinku?" Name="passwordButton" Margin="0,0,0,0" Foreground="AliceBlue"/>
                 <Button  Style="{StaticResource ButtonStyle}" Content="Prijavi se sa Google+" Name="googleButton" Background="Red" HorizontalAlignment="Stretch"/>
             </StackPanel>
@@ -34,7 +35,10 @@
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
             <TextBlock Grid.Column="0" Text="Zelis nam se pridruziti?" Margin="0,17,0,10" Foreground="White" HorizontalAlignment="Center"/>
-            <HyperlinkButton Grid.Column="1" Content="Registruj se ovdje" Margin="0,10,0,10" Foreground="White" HorizontalAlignment="Center"/>
+            <HyperlinkButton Grid.Column="1" Content="Registruj se ovdje" Margin="0,10,0,10" Foreground="White" HorizontalAlignment="Center" Command="{Binding Registracija}"/>
         </Grid>
+        <RelativePanel Grid.Column="3">
+            <Button Command="{Binding Back}" RelativePanel.AlignRightWithPanel="True" Margin="10" FontFamily="Segoe MDL2 Assets" Content="&#xE106;" Foreground="#FF004DBB" Background="Transparent" FontSize="20" BorderThickness="0"/>
+        </RelativePanel>
     </Grid>
 </Page>

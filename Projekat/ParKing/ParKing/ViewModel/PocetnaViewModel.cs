@@ -18,7 +18,7 @@ namespace ParKing.ViewModel
         public ObservableCollection<ParkingRezervacija> ParkinziRezervacije { get; set; }
         public Parking Parking { get; set; }
         public ParkingRezervacija ParkingRezervacija { get; set; }
-        public User Korisnik { get; set; }
+        public static User Korisnik { get; set; }
 
         public ICommand RezervisiBtn { get; set; }
 

@@ -15,9 +15,10 @@ namespace ParKing.ViewModel
         public User User { get; set; }
         public ICommand Back { get; set; }
         INavigationService NavigationService { get; set; }
+
         public UserViewModel()
         {
-            List<Parking> parkinzi = new List<Parking>();
+            /*List<Parking> parkinzi = new List<Parking>();
             List<Ocjena> ocjene = new List<Ocjena>();
             ParkingRezervacija temp = new ParkingRezervacija();
             ocjene.Add(new Ocjena(4, "Top parking", temp, User));
@@ -35,10 +36,11 @@ namespace ParKing.ViewModel
             User tempU;
             if (parkinzi.Count != 0) tempU = new VlasnikParkinga("riktash38@gmail.com", "062/157-463", "huehuehue", parkinzi, rezervacije);
             else tempU = new User("riktash38@gmail.com", "062/157-463", "huehuehue", rezervacije);
-            User = tempU;
+            User = tempU;*/
             NavigationService = new NavigationService();
             Back = new RelayCommand<object>(GoBack);
         }
+
         public void GoBack(object parameter)
         {
             NavigationService.GoBack();

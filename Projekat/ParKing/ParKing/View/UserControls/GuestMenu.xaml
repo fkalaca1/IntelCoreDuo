@@ -24,13 +24,13 @@
             </ListBoxItem>
             <ListBoxItem x:Name="PrijavaListBoxItem">
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE713;" FontSize="24" Foreground="#147ad4"/>
+                    <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xEA8C;" FontSize="24" Foreground="#147ad4"/>
                     <TextBlock Style="{StaticResource SplitViewTextBlock}">Prijavi se</TextBlock>
                 </StackPanel>
             </ListBoxItem>
             <ListBoxItem x:Name="RegistracijaListBoxItem" VerticalAlignment="Bottom">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom">
-                    <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE7E8;" FontSize="24" Foreground="#147ad4"/>
+                    <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE8FA;" FontSize="24" Foreground="#147ad4"/>
                     <TextBlock Style="{StaticResource SplitViewTextBlock}">Registruj se</TextBlock>
                 </StackPanel>
             </ListBoxItem>

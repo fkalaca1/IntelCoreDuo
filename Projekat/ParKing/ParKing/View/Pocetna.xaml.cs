@@ -74,8 +74,9 @@ namespace ParKing.View
                 AdminMenu.Visibility = Visibility.Collapsed;
                 GuestMenu.Visibility = Visibility.Collapsed;
             }
-            ((PocetnaViewModel)this.DataContext).Korisnik = e.Parameter as User;
+            PocetnaViewModel.Korisnik = e.Parameter as User;
         }
+
         private void MapControl1_MapElementClick(MapControl sender, MapElementClickEventArgs args)
         {
             var map = args.MapElements.FirstOrDefault(x => x is MapIcon) as MapIcon;

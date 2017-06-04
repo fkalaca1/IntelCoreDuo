@@ -1,4 +1,5 @@
 ﻿using ParKing.Helper;
+using ParKing.Model;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -32,7 +33,7 @@ namespace ParKing.View.UserControls
         {
             if (PocetnaListBoxItem.IsSelected)
             {
-                NavigationService.Navigate(typeof(View.Pocetna));
+                NavigationService.Navigate(typeof(View.Pocetna), new Gost());
             }
             else if (ListaParkingaListBoxItem.IsSelected)
             {
