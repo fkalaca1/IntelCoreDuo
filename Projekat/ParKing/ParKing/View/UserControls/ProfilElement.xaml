@@ -8,11 +8,10 @@
     mc:Ignorable="d">
     <ScrollViewer VerticalScrollBarVisibility="Auto">
         <StackPanel>
-            <local:EditElement PropertyTextBlock="&#xE119;" PropertyTextBox="{Binding User.Email, Mode=TwoWay}"/>
-            <local:EditElement PropertyTextBlock="&#xE13A;" PropertyTextBox="{Binding User.BrojTelefona}"/>
-            <local:EditElement PropertyTextBlock="&#xE8D7;" PropertyTextBox="Lozinka"/>
-            <local:EditElement PropertyTextBlock="&#xE90E;" PropertyTextBox="Metode placanja"/>
+            <local:EditElement PropertyTextBlock="&#xE119;" PropertyTextBox="{Binding Mail, Mode=TwoWay}" EditProperty="{Binding EditEnableMail, Mode=TwoWay}" EditLinkClick="{Binding EditMail, Mode=TwoWay}" HyperLinkContent="{Binding EditSaveMail, Mode=TwoWay}"/>
+            <local:EditElement PropertyTextBlock="&#xE13A;" PropertyTextBox="{Binding BrojTelefona, Mode=TwoWay}" EditProperty="{Binding EditEnableBrojTelefona, Mode=TwoWay}" EditLinkClick="{Binding EditBrojTelefona, Mode=TwoWay}" HyperLinkContent="{Binding EditSaveBrojTelefona, Mode=TwoWay}"/>
+            <local:EditElement PropertyTextBlock="&#xE8D7;" PropertyTextBox="{Binding Lozinka, Mode=TwoWay}" EditProperty="{Binding EditEnableLozinka, Mode=TwoWay}" EditLinkClick="{Binding EditLozinka, Mode=TwoWay}" HyperLinkContent="{Binding EditSaveLozinka, Mode=TwoWay}"/>
+            <local:EditElement PropertyTextBlock="&#xE90E;" PropertyTextBox="Metode placanja" HyperLinkContent="edit" EditProperty="False"/>
         </StackPanel>
     </ScrollViewer>
-
 </UserControl>

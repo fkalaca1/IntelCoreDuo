@@ -10,8 +10,8 @@
     x:Name="property">
 
     <RelativePanel>
-        <TextBlock Name="propertyTextBlock" FontFamily="Segoe MDL2 assets" Text="{Binding Path=PropertyTextBlock, ElementName=property}" RelativePanel.AlignVerticalCenterWithPanel="True" FontSize="50" Margin="10,0,0,0" Foreground="Gray"/>
-        <TextBox Name="propertyTextBox" Text="{Binding Path=PropertyTextBox, ElementName=property}" RelativePanel.RightOf="propertyTextBlock" RelativePanel.LeftOf="propertyHyperlinkButton" RelativePanel.AlignVerticalCenterWithPanel="True" Background="Transparent" BorderBrush="Transparent" IsEnabled="False" Margin="10,0,10,0" TextAlignment="Center"/>
-        <HyperlinkButton Name="propertyHyperlinkButton" Content="edit" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="0,0,10,0"/>
+        <TextBlock Name="propertyTextBlock" FontFamily="Segoe MDL2 assets" Text="{Binding Path=PropertyTextBlock, ElementName=property, Mode=TwoWay}" RelativePanel.AlignVerticalCenterWithPanel="True" FontSize="50" Margin="10,0,0,0" Foreground="Gray"/>
+        <TextBox Name="propertyTextBox" Text="{Binding Path=PropertyTextBox, ElementName=property, Mode=TwoWay}" RelativePanel.RightOf="propertyTextBlock" RelativePanel.LeftOf="propertyHyperlinkButton" RelativePanel.AlignVerticalCenterWithPanel="True" Background="Transparent" BorderBrush="Transparent" IsEnabled="{Binding Path=EditProperty, ElementName=property, Mode=TwoWay}" Margin="10,0,10,0" TextAlignment="Center"/>
+        <HyperlinkButton Name="propertyHyperlinkButton" Content="{Binding Path=HyperLinkContent, ElementName=property, Mode=TwoWay}" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="0,0,10,0" Command="{Binding Path=EditLinkClick, ElementName=property, Mode=TwoWay}"/>
     </RelativePanel>
 </UserControl>

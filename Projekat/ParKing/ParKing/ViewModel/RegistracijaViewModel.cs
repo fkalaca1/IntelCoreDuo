@@ -201,7 +201,7 @@ namespace ParKing.ViewModel
             {
                 ImeErrorMessage = PrezimeErrorMessage = EmailErrorMessage = PasswordErrorMessage = RepeatPasswordErrorMessage = "";
                 bool flag = false;
-                if(Ime == null || Prezime == null || Password == null || RepeatPassword == null || Email == null)
+                if (Ime == null || Prezime == null || Password == null || RepeatPassword == null || Email == null)
                 {
                     ErrorMessage = "Obavezno polje";
                     flag = true;

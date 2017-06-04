@@ -62,10 +62,10 @@ namespace ParKing.ViewModel
                         {
                             NavigationService.Navigate(typeof(View.Pocetna), user);
                         }
-                        ErrorMessage = "Pogresna sifra ili mail";
                         break;
                     }
                 }
+                ErrorMessage = "Pogresna sifra ili mail";
             }
         }
 
