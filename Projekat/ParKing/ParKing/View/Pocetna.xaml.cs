@@ -100,7 +100,8 @@ namespace ParKing.View
             }
             else
             {
-                ((ViewModel.PocetnaViewModel)this.DataContext).ParkingRezervacija = parkingRezervacija;
+                //((ViewModel.PocetnaViewModel)this.DataContext).ParkingRezervacija = parkingRezervacija;
+                PocetnaViewModel.ParkingRezervacija = parkingRezervacija;
                 parkingElement.AdresaTextBlock = parkingRezervacija.Adresa;
                 parkingElement.CijenaTextBlock = parkingRezervacija.DajCijenu;
                 parkingElement.RatingP = parkingRezervacija.Prosjek;

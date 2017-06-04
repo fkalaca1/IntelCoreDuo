@@ -17,8 +17,35 @@ namespace ParKing.ViewModel
     public class ParkingViewModel
     {
         public ObservableCollection<Parking> Parkinzi { get; set; }
-        public Parking parking { get; set; }
+        private Parking par;
+        public Parking parking
+        {
+            get
+            {
+                PocetnaViewModel.ParkingRezervacija = par as ParkingRezervacija;
 
+                return par;
+            }
+
+            set
+            {
+                par = value;
+            }
+        }
+        public String BrTelefona
+        {
+            get
+            {
+                try
+                {
+                    return (par as ParkingRezervacija).BrojTelefona;
+                }
+                catch(Exception e)
+                {
+                    return "-";
+                }
+            }
+        }
         public ICommand Back { get; set; }
         public ICommand RezervisiCommand { get; set; }
         INavigationService NavigationService { get; set; }
@@ -26,6 +53,8 @@ namespace ParKing.ViewModel
         {
             NavigationService = new NavigationService();
             Back = new RelayCommand<object>(GoBack);
+
+            RezervisiCommand = PocetnaViewModel.RezervisiBtn;
         }
 
         public void GoBack(object parameter)

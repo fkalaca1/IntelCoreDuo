@@ -31,9 +31,16 @@ namespace ParKing.View
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            var parking = (Parking)e.Parameter;
-
-            ((ViewModel.ParkingViewModel)this.DataContext).parking = parking;
+            try
+            {
+                var parking = (ParkingRezervacija)e.Parameter;
+                ((ViewModel.ParkingViewModel)this.DataContext).parking = parking;
+            }
+            catch(Exception ex)
+            {
+                var park = (Parking)e.Parameter;
+                ((ViewModel.ParkingViewModel)this.DataContext).parking = park;
+            }
         }
     }
 }
