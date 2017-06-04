@@ -23,6 +23,7 @@ namespace ParKing.ViewModel
         public Administrator Admin { get; set; }
         public Gost Gost { get; set; }
 
+
         public ICommand RezervisiBtn { get; set; }
 
         private String rezervisanoOd;

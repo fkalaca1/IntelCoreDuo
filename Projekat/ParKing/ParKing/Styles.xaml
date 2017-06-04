@@ -46,12 +46,13 @@
         <Setter Property="VerticalAlignment" Value="Center"/>
     </Style>
     <Style x:Name="TekstStranice2" TargetType="TextBlock">
-        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Foreground" Value="Gray"/>
         <Setter Property="FontFamily" Value="Segoe UI"/>
         <Setter Property="FontSize" Value="18"/>
         <Setter Property="FontWeight" Value="Bold"/>
-        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="HorizontalAlignment" Value="Right"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0,0,0,10" />
     </Style>
     <Style x:Name="TekstStranice3" TargetType="TextBlock">
         <Setter Property="Foreground" Value="White"/>
@@ -60,6 +61,15 @@
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="Margin" Value="10,0,0,0" />
+    </Style>
+    <Style x:Name="ParkingDetaljiTextBlock" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="FontFamily" Value="Segoe UI"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="10,0,0,0"/>
     </Style>
 
     <Style TargetType="Button" x:Name="ButtonStyle">

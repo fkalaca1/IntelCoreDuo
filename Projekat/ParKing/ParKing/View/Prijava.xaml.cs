@@ -29,5 +29,10 @@ namespace ParKing.View
             this.InitializeComponent();
             this.DataContext = new ViewModel.PrijavaViewModel();
         }
+
+        private void loginButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

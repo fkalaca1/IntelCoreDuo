@@ -252,7 +252,8 @@ namespace ParKing.ViewModel
 
                 db.SaveChanges();
 
-                NavigationService.Navigate(typeof(View.Pocetna), noviKorisnik);
+                NavigationService.Navigate(typeof(View.Pocetna),noviKorisnik);
+
             }
             
         }

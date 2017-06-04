@@ -9,109 +9,78 @@
     mc:Ignorable="d">
 
     <ScrollViewer VerticalScrollBarVisibility="Auto">
-        <Grid Background="#147ad4">
+        <Grid Background="White">
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="100"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="60"/>
             </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
+            <Grid.RowDefinitions> 
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="250"/>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="200"/>
                 <RowDefinition Height="60"/>
             </Grid.RowDefinitions>
 
-            <StackPanel Grid.Row="1" Grid.ColumnSpan="3" Background="Green">
+            <StackPanel Background="#147ad4" Grid.Row="1" Grid.ColumnSpan="3">
                 <lr:DateTimeControl/>
             </StackPanel>
 
-            <Image MaxWidth="800" Grid.Row="2" Grid.Column="1" Source="{Binding parking.Slika.Source}" Margin="0,10,0,10" Stretch="Uniform"/>
+            <Image MaxWidth="1000" Grid.Row="2" Grid.ColumnSpan="3" Source="ms-appx:///Assets/parkingPicture.jpg" Margin="0,0,0,30" Stretch="UniformToFill"/>
 
             <!--Stek panel lijevi-->
             <StackPanel x:Name="Detalji2" Grid.Row="3" Grid.Column="0">
-
-                <Border BorderBrush="White" BorderThickness="1" Margin="5">
-                    <TextBlock 
-            x:Name="textBlockOcjena2"         
+                    
+            <TextBlock x:Name="textBlockOcjena2"      
             Text="Ocjena" 
-            Style="{StaticResource TekstStranice2}"/>
-                </Border>
-
-                <Border BorderBrush="White" BorderThickness="1" Margin="5">
-
-                    <TextBlock 
-            x:Name="textBlockAdresa2"  
+            Style="{StaticResource TekstStranice2}" Margin="5"/>
+        
+            <TextBlock x:Name="textBlockAdresa2"  
             Text="Adresa" 
-            Style="{StaticResource TekstStranice2}"/>
+            Style="{StaticResource TekstStranice2}" Margin="5"/>
 
-                </Border>
-
-                <Border BorderBrush="White" BorderThickness="1" Margin="5">
-                    <TextBlock 
-            x:Name="textBlockCijena2"  
+            <TextBlock x:Name="textBlockCijena2"  
             Text="Cijena" 
-            Style="{StaticResource TekstStranice2}"/>
-                </Border>
-
-                <Border BorderBrush="White" BorderThickness="1" Margin="5">
-                    <TextBlock 
-            x:Name="textBlockTelefon2"  
+            Style="{StaticResource TekstStranice2}" Margin="5"/>
+                
+            <TextBlock x:Name="textBlockTelefon2"  
             Text="Telefon" 
-            Style="{StaticResource TekstStranice2}"/>
-                </Border>
+            Style="{StaticResource TekstStranice2}" Margin="5"/>
 
-
-                <Border BorderBrush="White" BorderThickness="1" Margin="5">
-                    <TextBlock 
-            x:Name="textBlockKapacitet2"  
+                <TextBlock x:Name="textBlockKapacitet2"  
             Text="Kapacitet" 
-            Style="{StaticResource TekstStranice2}"/>
-                </Border>
+            Style="{StaticResource TekstStranice2}" Margin="5"/>
             </StackPanel>
 
             <!--Stek panel desni-->
             <StackPanel x:Name="Detalji" Grid.Row="3" Grid.Column="1">
             
-            <Border BorderBrush="White" BorderThickness="1" Margin="5">
-                    <local:RatingElement Height="25" Width="125" HorizontalAlignment="Left" RateValue="{Binding parking.Prosjek}" />
-                </Border>
-
-            <Border BorderBrush="White" BorderThickness="1" Margin="5">
+            <local:RatingElement Margin="5" Height="25" Width="125" HorizontalAlignment="Left" RateValue="{Binding parking.Prosjek}" />
              
-            <TextBlock 
-            x:Name="textBlockAdresa"  
+            <TextBlock x:Name="textBlockAdresa" Margin="5" 
             Text="{Binding parking.Adresa,Mode=TwoWay}" 
-            Style="{StaticResource TekstStranice2}"/>
-                
-            </Border>
-                
-            <Border BorderBrush="White" BorderThickness="1" Margin="5">
-            <TextBlock 
-            x:Name="textBlockCijena"  
-            Text="{Binding parking.Cijena,Mode=TwoWay}"
-            Style="{StaticResource TekstStranice2}"/>
-            </Border>
+            Style="{StaticResource ParkingDetaljiTextBlock}"/>
 
-            <Border BorderBrush="White" BorderThickness="1" Margin="5">
-            <TextBlock 
+                <TextBlock x:Name="textBlockCijena" Margin="5"
+            Text="{Binding parking.Cijena,Mode=TwoWay}"
+            Style="{StaticResource ParkingDetaljiTextBlock}"/>
+
+            <TextBlock Margin="5"
             x:Name="textBlockTelefon"  
             Text="{Binding parking.Telefon,Mode=TwoWay}"
-            Style="{StaticResource TekstStranice2}"/>
-            </Border>
+            Style="{StaticResource ParkingDetaljiTextBlock}"/>
 
-
-           <Border BorderBrush="White" BorderThickness="1" Margin="5">
-            <TextBlock 
+            <TextBlock Margin="5"
             x:Name="textBlockKapacitet"  
             Text="{Binding parking.Kapacitet,Mode=TwoWay}"
-            Style="{StaticResource TekstStranice2}"/>
-            </Border>
+            Style="{StaticResource ParkingDetaljiTextBlock}"/>
+
             </StackPanel>
             
             <Button
+                Command="{Binding RezervisiCommand}"
             Content="Rezervisi sad"
             Grid.Row="4"
             Grid.ColumnSpan="3"
@@ -120,7 +89,7 @@
             VerticalAlignment="Stretch"
             Style="{StaticResource ButtonStyle}"/>
 
-            <StackPanel Orientation="Horizontal" Grid.ColumnSpan="3">
+            <StackPanel Background="#147ad4" Orientation="Horizontal" Grid.ColumnSpan="3">
 
                 <Button x:Name="BackButton"
             VerticalAlignment="Top"
@@ -128,7 +97,7 @@
             Command="{Binding Path=Back}"
             />
 
-                <TextBlock
+                <TextBlock 
                     VerticalAlignment="Center"
             x:Name="textBlockImeParkinga"  
             Text="{Binding parking.Adresa}" 
