@@ -26,14 +26,13 @@ namespace ParKing.View.UserControls
         {
             this.InitializeComponent();
             NavigationService = new NavigationService();
-            this.DataContext = new PocetnaViewModel();
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if(ProfilListBoxItem.IsSelected)
             {
-                NavigationService.Navigate(typeof(View.Profil), PocetnaViewModel.Korisnik);
+                NavigationService.Navigate(typeof(View.Profil));
             }
             else if(PocetnaListBoxItem.IsSelected)
             {
