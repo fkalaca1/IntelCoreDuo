@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using ParKing.Helper;
+using Microsoft.WindowsAzure.MobileServices;
 
 namespace ParKing.ViewModel
 {
@@ -89,6 +90,11 @@ namespace ParKing.ViewModel
 
         public void Rezervisi(object parameter)
         {
+            if(Korisnik == null)
+            {
+                Validacija.message("Da bi ste rezervisali parking morate biti prijavljeni", "Prijavi se");
+                return;
+            }
             DateTime rezervacijaOd = DateTime.ParseExact(RezervisanoOd, "d MMMM yyyy, HH:mm", null);
             DateTime rezervacijaDo = DateTime.ParseExact(RezervisanoDo, "d MMMM yyyy, HH:mm", null);
 
@@ -105,6 +111,7 @@ namespace ParKing.ViewModel
             rezervacija.ParkingRezervacijaId = ParkingRezervacija.ParkingRezervacijaId;
             rezervacija.UserId = Korisnik.UserId;
             
+
             using(var db = new ParkingDBContext())
             {
                 db.Rezervacije.Add(rezervacija);

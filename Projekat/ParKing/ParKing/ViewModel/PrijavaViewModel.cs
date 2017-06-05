@@ -1,4 +1,5 @@
-﻿using ParKing.Helper;
+﻿using Microsoft.WindowsAzure.MobileServices;
+using ParKing.Helper;
 using ParKing.Model;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Windows.UI.Popups;
 
 namespace ParKing.ViewModel
 {
@@ -46,6 +48,7 @@ namespace ParKing.ViewModel
 
         public void loginButton_click(object parameter)
         {
+           
             using (var db = new ParkingDBContext())
             {
                 ErrorMessage = "";

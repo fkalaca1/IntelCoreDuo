@@ -12,11 +12,13 @@ using ParKing.Model;
 using Windows.Security.Cryptography.Core;
 using Windows.Storage.Streams;
 using Windows.Security.Cryptography;
+using Microsoft.WindowsAzure.MobileServices;
 
 namespace ParKing.ViewModel
 {
     public class RegistracijaViewModel : INotifyPropertyChanged
     {
+        IMobileServiceTable<Azure.User> userTbl = App.MobileService.GetTable<Azure.User>();
         public ICommand Back { get; set; }
         public ICommand Register { get; set; }
         INavigationService NavigationService { get; set; }
@@ -251,6 +253,25 @@ namespace ParKing.ViewModel
                 db.Useri.Add(noviKorisnik);
 
                 db.SaveChanges();
+
+                try
+                {
+                    Azure.User azureUser = new Azure.User();
+                    azureUser.Ime = Ime;
+                    azureUser.Prezime = Prezime;
+                    azureUser.Email = Email;
+                    azureUser.Sifra = Validacija.createMD5(Password);
+
+                    userTbl.InsertAsync(azureUser);
+
+                    Validacija.message("Uspjesno ste se registrovali", "Cestitamo");
+                }
+                catch(Exception e)
+                {
+                    Validacija.message(e.Message, "Greska");
+
+                }
+
 
                 NavigationService.Navigate(typeof(View.Pocetna),noviKorisnik);
 
