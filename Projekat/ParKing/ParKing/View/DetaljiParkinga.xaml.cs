@@ -35,11 +35,13 @@ namespace ParKing.View
             {
                 var parking = (ParkingRezervacija)e.Parameter;
                 ((ViewModel.ParkingViewModel)this.DataContext).parking = parking;
+                RezervisiBtn.IsEnabled = true;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 var park = (Parking)e.Parameter;
                 ((ViewModel.ParkingViewModel)this.DataContext).parking = park;
+                RezervisiBtn.IsEnabled = false;
             }
         }
     }

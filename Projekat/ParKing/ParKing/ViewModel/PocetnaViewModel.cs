@@ -90,6 +90,10 @@ namespace ParKing.ViewModel
 
         public void Rezervisi(object parameter)
         {
+            if(ParkingRezervacija == null)
+            {
+                return;
+            }
             if(Korisnik == null)
             {
                 Validacija.message("Da bi ste rezervisali parking morate biti prijavljeni", "Prijavi se");

@@ -80,6 +80,7 @@
             </StackPanel>
             
             <Button
+                x:Name="RezervisiBtn"
                 Command="{Binding RezervisiCommand}"
             Content="Rezervisi sad"
             Grid.Row="4"
