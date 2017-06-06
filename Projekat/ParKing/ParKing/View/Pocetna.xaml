@@ -19,8 +19,9 @@
 
         <RelativePanel Background="#147ad4">
             <Button x:Name="HamburgerButton" FontSize="25" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" RelativePanel.AlignLeftWithPanel="True" Click="HamburgerButton_Click"/>
-            <TextBlock Style="{StaticResource TekstStranice3}" RelativePanel.AlignVerticalCenterWith="HamburgerButton" Text="Pocetna" RelativePanel.RightOf="HamburgerButton" />
-            <SearchBox Margin="0,2,0,0" Padding="0,0,10,0" Width="250" FontSize="20" RelativePanel.AlignRightWithPanel="True" PlaceholderText="Trazi"/>
+            <TextBlock Style="{StaticResource TekstStranice3}" Name="naslovTextBlock" RelativePanel.AlignVerticalCenterWith="HamburgerButton" Text="Pocetna" RelativePanel.RightOf="HamburgerButton" />
+            <SearchBox x:Name="searchBox"  Margin="0,2,0,0" Padding="0,0,10,0" Width="250" FontSize="20" RelativePanel.AlignRightWithPanel="True" PlaceholderText="Trazi"/>
+            <TextBlock Name="govno" RelativePanel.RightOf="naslovTextBlock" RelativePanel.AlignLeftWith="searchBox" MinWidth="5"/>
         </RelativePanel>
 
         <SplitView Grid.Row="1" 

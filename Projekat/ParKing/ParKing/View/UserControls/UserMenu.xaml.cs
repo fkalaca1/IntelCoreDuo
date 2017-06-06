@@ -39,7 +39,7 @@ namespace ParKing.View.UserControls
             {
                 NavigationService.Navigate(typeof(View.Pocetna), PocetnaViewModel.Korisnik);
             }
-            else if(ListaParkingaListBoxItem.IsSelected)
+            else if(ListaParkingaListBoxItem.IsSelected || PopularnoListBoxItem.IsSelected)
             {
                 NavigationService.Navigate(typeof(View.ListaParkinga));
             }

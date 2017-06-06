@@ -30,7 +30,7 @@
             <TextBlock 
             x:Name="textBlockTipParkinga"  
             Text="Tip parkinga" 
-            Style="{StaticResource TekstStranice2}"/>
+            Style="{StaticResource TekstStranice2}" Foreground="Black" HorizontalAlignment="Left"/>
 
             <StackPanel x:Name="TipParkingaStackPanel" Orientation="Horizontal">
                 <RadioButton 
@@ -47,7 +47,7 @@
             x:Name="textBlockKapacitetParkinga"  Grid.Row="4"
             Text="Kapacitet parkinga" 
             Grid.Column="1"
-            Style="{StaticResource TekstStranice2}"/>
+            Style="{StaticResource TekstStranice2}" Foreground="Black" HorizontalAlignment="Left"/>
 
             <TextBox 
             x:Name="textBoxKapacitet" 
@@ -60,7 +60,7 @@
             x:Name="textBlockOpis"  
             Text="Opis" 
             Grid.Column="1"
-            Style="{StaticResource TekstStranice2}"/>
+            Style="{StaticResource TekstStranice2}" Foreground="Black" HorizontalAlignment="Left"/>
 
             <TextBox 
             x:Name="textBoxOpis"
@@ -74,7 +74,7 @@
             x:Name="textBlockCijena"  
             Text="Cijena" 
             Grid.Column="1"
-            Style="{StaticResource TekstStranice2}"/>
+            Style="{StaticResource TekstStranice2}" Foreground="Black" HorizontalAlignment="Left"/>
 
             <TextBox 
             x:Name="textBoxCijena" 
@@ -86,7 +86,7 @@
             <TextBlock 
             x:Name="textBlockBrojTelefona"  
             Text="Broj telefona" 
-            Style="{StaticResource TekstStranice2}"/>
+            Style="{StaticResource TekstStranice2}" Foreground="Black" HorizontalAlignment="Left"/>
 
             <TextBox 
             x:Name="textBoxBrojTelefona" 
@@ -95,7 +95,7 @@
             Grid.Column="1"
             Style="{StaticResource TextBoxStyle}"/>
 
-            <Button
+            <Button Margin="0,10,0,0" HorizontalAlignment="Stretch"
             Content="Dodaj Parking"
             Grid.Row="12"
             Grid.Column="1"

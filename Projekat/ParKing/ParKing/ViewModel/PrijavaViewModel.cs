@@ -52,7 +52,7 @@ namespace ParKing.ViewModel
             using (var db = new ParkingDBContext())
             {
                 ErrorMessage = "";
-                if (Username == null && Password == null)
+                if (Username == null || Password == null)
                 {
                     ErrorMessage = "Unesite podatke";
                     return;
